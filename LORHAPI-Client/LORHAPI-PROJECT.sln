@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LORHAPI-Client", "LORHAPI-Client.csproj", "{1193D962-501B-41F3-A2D5-4FC75B96E82A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{5FB373C5-9143-46CE-95AF-79279FD8CA79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5B6C4AE0-D23F-4785-9BB7-10DA6FB43A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LORHAPI-API", "..\LORHAPI-API\LORHAPI-API.csproj", "{E7BBB430-574F-4203-85A2-93CE45DCD5C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1193D962-501B-41F3-A2D5-4FC75B96E82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1193D962-501B-41F3-A2D5-4FC75B96E82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1193D962-501B-41F3-A2D5-4FC75B96E82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1193D962-501B-41F3-A2D5-4FC75B96E82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7BBB430-574F-4203-85A2-93CE45DCD5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BBB430-574F-4203-85A2-93CE45DCD5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BBB430-574F-4203-85A2-93CE45DCD5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BBB430-574F-4203-85A2-93CE45DCD5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1193D962-501B-41F3-A2D5-4FC75B96E82A} = {5FB373C5-9143-46CE-95AF-79279FD8CA79}
+		{E7BBB430-574F-4203-85A2-93CE45DCD5C9} = {5B6C4AE0-D23F-4785-9BB7-10DA6FB43A11}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B7E46E9-F3C7-4057-869D-29282A5FD177}
+	EndGlobalSection
+EndGlobal
