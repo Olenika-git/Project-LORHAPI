@@ -34,4 +34,7 @@
 /Debug
 /build
 /*.suo
+/obj
+/debug
+.vs
 
