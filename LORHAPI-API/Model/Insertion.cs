@@ -23,9 +23,7 @@ namespace LORHAPI_API.Model
         public string Departement { get; set; }
         public string DiplomeRequis { get; set; }
         public string DiplomeObtenu { get; set; }
-
         public string IdSecteur { get; set; }
-
         public int IdClient { get; set; }
 
 
