@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+=======
+using LORHAPI_API.Data;
+>>>>>>> b2534f9 (MAJ)
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
+=======
+using Microsoft.EntityFrameworkCore;
+>>>>>>> b2534f9 (MAJ)
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +36,11 @@ namespace LORHAPI_API
         {
 
             services.AddControllers();
+<<<<<<< HEAD
+=======
+            services.AddDbContext<Db_Context>(options => //ajout pour accès BDD
+            options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+>>>>>>> b2534f9 (MAJ)
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LORHAPI_API", Version = "v1" });
