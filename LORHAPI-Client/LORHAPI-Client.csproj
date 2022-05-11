@@ -6,7 +6,10 @@
   </PropertyGroup>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3d2e19630eaac164107ead4f5cf5abae72199636
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -14,5 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+<<<<<<< HEAD
 >>>>>>> b2534f9 (MAJ)
+=======
+>>>>>>> 3d2e19630eaac164107ead4f5cf5abae72199636
 </Project>

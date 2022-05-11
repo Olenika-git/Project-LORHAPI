@@ -16,9 +16,15 @@ namespace LORHAPI_API.Controllers
         private readonly Db_Context UserContext;  //ont initialise le DbContext
 
 
+<<<<<<< HEAD
         private readonly ILogger<WeatherForecastController> _logger;
 
         public UsersController(ILogger<WeatherForecastController> logger, Db_Context context) // on donne en parametre un Db_Context)
+=======
+        private readonly ILogger<UsersController> _logger;
+
+        public UsersController(ILogger<UsersController> logger, Db_Context context) // on donne en parametre un Db_Context)
+>>>>>>> 3d2e19630eaac164107ead4f5cf5abae72199636
         {
             _logger = logger;
             UserContext = context;  //on assigne le Db_Context

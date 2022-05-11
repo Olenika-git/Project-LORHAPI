@@ -7,7 +7,10 @@
 
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3d2e19630eaac164107ead4f5cf5abae72199636
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -20,7 +23,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.13" />
+<<<<<<< HEAD
 >>>>>>> b2534f9 (MAJ)
+=======
+>>>>>>> 3d2e19630eaac164107ead4f5cf5abae72199636
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
