@@ -5,6 +5,11 @@
     <RootNamespace>LORHAPI_Client</RootNamespace>
   </PropertyGroup>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 54bb923 (Debut)
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -12,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+<<<<<<< HEAD
+=======
+>>>>>>> b2534f9 (MAJ)
+>>>>>>> 54bb923 (Debut)
 </Project>

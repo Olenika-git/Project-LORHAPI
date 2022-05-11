@@ -6,8 +6,16 @@
 *.lo
 *.o
 *.obj
+<<<<<<< HEAD
 */obj
 */bin
+=======
+<<<<<<< HEAD
+=======
+*/obj
+*/bin
+>>>>>>> b2534f9 (MAJ)
+>>>>>>> 54bb923 (Debut)
 
 # Precompiled Headers
 *.gch
@@ -40,6 +48,11 @@
 /debug
 .vs
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 54bb923 (Debut)
 LORHAPI-ClientMobile/LORHAPI-ClientMobile.Android/obj
 LORHAPI-ClientMobile/LORHAPI-ClientMobile.iOS/obj
 LORHAPI-ClientMobile/LORHAPI-ClientMobile/obj
@@ -47,3 +60,7 @@ LORHAPI-API/obj
 LORHAPI-API/appsettings.json
 LORHAPI-Client/obj
 LORHAPI-Client/bin
+<<<<<<< HEAD
+=======
+>>>>>>> b2534f9 (MAJ)
+>>>>>>> 54bb923 (Debut)
