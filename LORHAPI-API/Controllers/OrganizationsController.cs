@@ -15,8 +15,8 @@ namespace LORHAPI_API.Controllers
     [Route("[controller]")]
     public class OrganizationsController : Controller
     {
-        private readonly Db_Context OrganizationContext;
-        private readonly ILogger<OrganizationsController> _logger;
+        private readonly Db_Context OrganizationContext; //Injection de Dépendances
+        private readonly ILogger<OrganizationsController> _logger; //INjecion de dépendances
 
         public OrganizationsController(ILogger<OrganizationsController> logger, Db_Context context)
         {
@@ -24,13 +24,13 @@ namespace LORHAPI_API.Controllers
             OrganizationContext = context;
         }
 
-        // GET /Users
+        // GET /Organization
         /// <summary>
-        /// Get a list of User
+        /// Get a list of Organization
         /// </summary>
-        /// <returns>List of User</returns>
+        /// <returns>List of Organization</returns>
         [HttpGet]
-        public List<Organization> GetInsertion()
+        public ActionResult<List<Organization>> GetOrganization()
         {
             List<Organization> OrganizationList = new();
 
@@ -39,7 +39,29 @@ namespace LORHAPI_API.Controllers
                 OrganizationList.Add(organization);
             }
 
-            return OrganizationList;
+            return Ok(OrganizationList);
+        }
+
+        // GET /Organization/id
+        /// <summary>
+        /// Get a Organization by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Organization</returns>
+        [HttpGet("{orgName}")]
+        public ActionResult<List<Organization>> GetOrganizationByName(string orgName) //ActionResult sert à renvoyer plusieurs valeur selon la conditions
+        {
+
+
+            if (OrganizationContext.Organizations.Find(orgName) is null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                List<Organization> OrganizationFound = OrganizationContext.Organizations.Where(organization => organization.OrgName == orgName).ToList();
+                return OrganizationFound;
+            }
         }
     }
 }
