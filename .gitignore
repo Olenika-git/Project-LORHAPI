@@ -40,10 +40,10 @@
 /debug
 .vs
 
-LORHAPI-ClientMobile/LORHAPI-ClientMobile.Android/obj
-LORHAPI-ClientMobile/LORHAPI-ClientMobile.iOS/obj
-LORHAPI-ClientMobile/LORHAPI-ClientMobile/obj
-LORHAPI-API/obj
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile.Android/obj
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile.iOS/obj
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile/obj
+*LORHAPI-API/obj
 LORHAPI-API/appsettings.json
-LORHAPI-Client/obj
-LORHAPI-Client/bin
+*LORHAPI-Client/obj
+*LORHAPI-Client/bin
