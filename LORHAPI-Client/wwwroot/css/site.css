@@ -69,3 +69,36 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+/*header SECTION*/
+.TitleHeader {
+    font: normal normal normal 60px/78px Lorhapi;
+    letter-spacing: 0px;
+    color: #FDFDFD;
+    opacity: 1;
+}
+.BtnHeader {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 0px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+}
+.HeaderBgColor{
+    background-color:#0B2769;
+}
+
+
+/* Footer Parts*/
+
+.FooterBgColor{
+    background-color:blue;
+}
+
+@font-face {
+    font-family: 'Lorhapi'; /*a name to be used later*/
+    src: url('../fonts/Blank River.ttf'); /*URL to font*/
+}
+
+
+
