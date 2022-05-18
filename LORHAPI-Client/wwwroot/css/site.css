@@ -138,10 +138,14 @@ nav ul {
         margin: 1em;
     }
 
-a.noDeco {
+a.noDecoWithFontFamily {
+    text-decoration: none !important;
+    color: white !important;
+    font: normal normal normal 18px/24px Yu Gothic UI !important;
+}
+a.NoDecoration {
     text-decoration: none !important;
     color: white;
-    font: normal normal normal 18px/24px Yu Gothic UI;
 }
 
 li.title {
@@ -187,6 +191,28 @@ nav ul li span:nth-child(4) {
     --n: 4;
 }
 /*End BtnHeader Section*/
+
+
+testo {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+coucou{
+    max-height:50px;
+}
+
+testAki {
+    background: #E6ECFB 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 0px #00000029;
+    border-radius: 43px;
+    opacity: 1;
+}
+
 
 
 
