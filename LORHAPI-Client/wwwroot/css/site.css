@@ -212,20 +212,18 @@ testAki {
     border-radius: 43px;
     opacity: 1;
 }
+
 .ButtonHeader {
     position:relative;
-    display: flex;
-    justify-content : space-around;
-    bottom:10px;
-
+    bottom:15px;
 }
+
 .ButtonType {
-    border-radius:20px;
-    font-size:20px;
+    border-radius:25px;
+    font-size:15px;
     align-content:center;
     box-shadow:5px 5px 5px gray;
     text-align:center;
-
 }
 
 
