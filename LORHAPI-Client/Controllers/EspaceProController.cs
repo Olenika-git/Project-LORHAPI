@@ -19,5 +19,10 @@ namespace LORHAPI_Client.Controllers
         {
             return View();
         }
+
+        public IActionResult MesInsertions()
+        {
+            return View();
+        }
     }
 }
