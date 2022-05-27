@@ -1,5 +1,7 @@
 ﻿using LORHAPI_API.Data;
+using LORHAPI_API.Dtos;
 using LORHAPI_API.Model;
+using LORHAPI_API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -15,13 +17,16 @@ namespace LORHAPI_API.Controllers
     {
         private readonly Db_Context UserContext;  //ont initialise le DbContext
 
+        private readonly IUserRepository repository; //ont initialise le repository
 
-        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(ILogger<UsersController> logger, Db_Context context) // on donne en parametre un Db_Context)
+        private readonly ILogger<UsersController> _logger; //ont initialise le Log System
+
+        public UsersController(ILogger<UsersController> logger, Db_Context context, IUserRepository repository) // on donne en parametre un Db_Context)
         {
             _logger = logger;
             UserContext = context;  //on assigne le Db_Context
+            this.repository = repository; //on assigne le repo
         }
 
         // GET /Users
@@ -30,16 +35,23 @@ namespace LORHAPI_API.Controllers
         /// </summary>
         /// <returns>List of User</returns>
         [HttpGet]
-        public List<User> GetUser()
+        public async Task<ActionResult<List<UserDto>>> GetUser()
         {
-            List<User> UserList = UserContext.Users.ToList();
+            List<UserDto> UserList = new();
 
-            //foreach (User user in UserContext.Users) //On utilise le DbContext
-            //{
-            //    UserList.Add(user);
-            //}
+            try
+            {
+                UserList = (await repository.GetUsersAsync()).Select(user => user.AsDto()).ToList();
 
-            return UserList;
+            }
+            finally
+            {
+                _logger.LogInformation($"{DateTime.UtcNow.ToString("hh:mm:ss")}: Retrieved {UserList.Count()}");
+
+                
+            }
+
+            return await Task.FromResult(UserList);
         }
 
         // GET /Users/id
@@ -49,21 +61,12 @@ namespace LORHAPI_API.Controllers
         /// <param name="id"></param>
         /// <returns>User</returns>
         [HttpGet ("{id}")]
-        public ActionResult<List<User>> GetUserByID(int id)
+        public async Task<ActionResult<UserDto>> GetUserByID(int id)
         {
-                
 
-                if(UserContext.Users.Find(id) is null)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    List<User> user = UserContext.Users.Where(user => user.IdClient == id).ToList();
+            User user = await repository.GetUserByIdAsync(id);
 
-
-                    return user;
-                }
+            return user.AsDto();
         }
 
         //[HttpPost]
