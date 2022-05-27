@@ -143,6 +143,7 @@ a.noDecoWithFontFamily {
     color: white !important;
     font: normal normal normal 18px/24px Yu Gothic UI !important;
 }
+
 a.NoDecoration {
     text-decoration: none !important;
     color: white;
@@ -202,8 +203,8 @@ testo {
     margin-right: -50vw;
 }
 
-coucou{
-    max-height:50px;
+coucou {
+    max-height: 50px;
 }
 
 testAki {
@@ -213,18 +214,14 @@ testAki {
     opacity: 1;
 }
 
-.ButtonHeader {
-    position:relative;
-    bottom:15px;
-}
-
 .ButtonType {
-    border-radius:25px;
-    font-size:15px;
-    align-content:center;
-    box-shadow:5px 5px 5px gray;
-    text-align:center;
+    border-radius: 25px;
+    font-size: 17px;
+    align-content: center;
+    box-shadow: 5px 5px 5px gray;
+    text-align: center;
+    background-color: #FDFDFD;
+    color: #0B2769;
+    font-family:Calibri;
+    font-weight:500;
 }
-
-
-
