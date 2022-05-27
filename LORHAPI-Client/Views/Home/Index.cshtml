@@ -7,7 +7,13 @@
         <img class="img-fluid " style="transform:translateY(-65px)" src="~/Images/banners/Jeune.jpg"/>
     </div>
 
-    <div class="testAki">
-        <p>Coucou</p>
-    </div>
+    @*<div class="" style="margin-top:8px;">  FCT DE RECHERCHE
+        @using (Html.BeginForm("Index", "HomeController", FormMethod.Get))
+        {
+            <ul class="nav navbar-nav testAki">
+                <li>@Html.TextBox("id", ViewBag.CurrentFilter as string)</li>
+                <li><input type="submit" value="Search" /></li>
+            </ul>
+        }
+    </div>*@
 </div>

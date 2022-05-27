@@ -32,12 +32,12 @@ namespace LORHAPI_API.Controllers
         [HttpGet]
         public List<User> GetUser()
         {
-            List<User> UserList = new();
+            List<User> UserList = UserContext.Users.ToList();
 
-            foreach (User user in UserContext.Users) //On utilise le DbContext
-            {
-                UserList.Add(user);
-            }
+            //foreach (User user in UserContext.Users) //On utilise le DbContext
+            //{
+            //    UserList.Add(user);
+            //}
 
             return UserList;
         }
@@ -60,6 +60,8 @@ namespace LORHAPI_API.Controllers
                 else
                 {
                     List<User> user = UserContext.Users.Where(user => user.IdClient == id).ToList();
+
+
                     return user;
                 }
         }
@@ -69,5 +71,6 @@ namespace LORHAPI_API.Controllers
         //{
         //    return;
         //}
+
     }
 }

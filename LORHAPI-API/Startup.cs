@@ -18,11 +18,12 @@ namespace LORHAPI_API
 {
     public class Startup
     {
+       
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
+                        
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -31,7 +32,9 @@ namespace LORHAPI_API
 
             services.AddControllers();
             services.AddDbContext<Db_Context>(options => //ajout pour accès BDD
-            options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+                                                        options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"))); //Connection Parts
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LORHAPI_API", Version = "v1" });

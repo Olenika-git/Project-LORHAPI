@@ -32,12 +32,12 @@ namespace LORHAPI_API.Controllers
         [HttpGet]
         public List<Insertion> GetInsertion()
         {
-            List<Insertion> InsertionList = new();
+            List<Insertion> InsertionList = InsertionContext.Insertions.ToList();
 
-            foreach (Insertion insertion in InsertionContext.Insertions) //On utilise le DbContext
-            {
-                InsertionList.Add(insertion);
-            }
+            //foreach (Insertion insertion in InsertionContext.Insertions) //On utilise le DbContext
+            //{
+            //    InsertionList.Add(insertion);
+            //}
 
             return InsertionList;
         }

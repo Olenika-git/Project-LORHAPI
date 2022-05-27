@@ -193,23 +193,12 @@ nav ul li span:nth-child(4) {
 /*End BtnHeader Section*/
 
 
-testo {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-}
 
-coucou{
-    max-height:50px;
-}
 
 testAki {
-    background: #E6ECFB 0% 0% no-repeat padding-box;
-    box-shadow: 6px 6px 0px #00000029;
-    border-radius: 43px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 14px;
     opacity: 1;
 }
 
