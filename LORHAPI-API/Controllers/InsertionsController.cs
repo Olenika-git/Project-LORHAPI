@@ -13,6 +13,7 @@ namespace LORHAPI_API.Controllers
     [Route("[controller]")]
     public class InsertionsController : ControllerBase
     {
+        public InsertionManager CurrentInsertion { get; set; }
         private readonly Db_Context InsertionContext;  //ont initialise le DbContext
 
 
@@ -51,8 +52,6 @@ namespace LORHAPI_API.Controllers
         [HttpGet("{id}")]
         public ActionResult<List<Insertion>> GetInsertionByID(int id)
         {
-
-
             if (InsertionContext.Users.Find(id) is null)
             {
                 return NotFound();
@@ -64,10 +63,51 @@ namespace LORHAPI_API.Controllers
             }
         }
 
-        //[HttpPost]
-        //public ActionResult<User> CreateUser()
-        //{
-        //    return;
-        //}
+        [HttpPost]
+        public async Task<ActionResult<Insertion>> CreateInsertion(Insertion Insertion)
+        {
+            InsertionContext.Insertions.Add(Insertion);
+            await InsertionContext.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetInsertion), new { id = Insertion.IdInsertion }, Insertion);
+        }
+
+        [HttpDelete("{id}")]
+        //Envoyer cette insertion vers un autre model "IdleInsertion" devienne inactif
+        public async Task<IActionResult> DeleteInsertion(int id)
+        {
+            Insertion Insertion = InsertionContext.Insertions.FirstOrDefault(x => x.IdInsertion == id);
+            if (Insertion != null)
+            {
+                InsertionContext.Insertions.Remove(Insertion);
+                await InsertionContext.SaveChangesAsync();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound(CurrentInsertion.ErrorMessageVerificationMatchId(id));
+            }
+        }
+
+        //Use a create Insertion to transform it into a new insertion
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateInsertion(int id, Insertion insertion)
+        {
+            if (!id.Equals(insertion.IdInsertion))
+            {
+                return BadRequest("Ids are different");
+            }
+
+            Insertion InsertionToUpdate = await InsertionContext.Insertions.FindAsync(insertion.IdInsertion);
+            if (InsertionToUpdate == null)
+            {
+                return NotFound(CurrentInsertion.ErrorMessageVerificationMatchId(id)); ;
+            }
+
+            //Use insertion in parameters to update the actual insertion
+            CurrentInsertion.PropUpdate(insertion, InsertionToUpdate);
+            await InsertionContext.SaveChangesAsync();
+            return NoContent();
+        }
     }
+
 }
