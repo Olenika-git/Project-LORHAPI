@@ -1,4 +1,5 @@
 ﻿using LORHAPI_API.Data;
+using LORHAPI_API.Manager;
 using LORHAPI_API.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
