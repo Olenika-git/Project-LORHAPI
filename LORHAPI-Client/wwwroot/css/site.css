@@ -226,5 +226,6 @@ testAki {
     text-align:center;
 }
 .Line {
-
+width:1px;
+height:5px;
 }
