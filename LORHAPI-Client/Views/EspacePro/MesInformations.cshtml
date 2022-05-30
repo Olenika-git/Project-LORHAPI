@@ -1,6 +1,22 @@
-﻿@*
+﻿@using LORHAPI_Client.Controllers
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<div class="container-fluid p-0">
+    <div class="" style="height:200px;overflow:hidden; position:relative">
+        <img class="img-fluid " style="transform:translateY(-65px)" src="~/Images/banners/Jeune.jpg" />
+    </div>
+</div>
+<div>
+    <div class="ButtonHeader row justify-content-center position-relative" style="bottom:25px">
+        <button class="ButtonType btn btn-light col-md-2 ml-md-2 btn-outline-primary" runat="server" onclick="window.location = 'https://localhost:5001/EspacePro'" style="font-size:19px; ">Accueil</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-2 btn-outline-primary" onclick="window.location = 'MesInformations'" style="font-size:19px;">Mes informations</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-2 btn-outline-primary" onclick="window.location = 'ListeOrganisation'" style="font-size:19px;">Liste des organisations</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-2 btn-outline-primary" onclick="window.location = 'MesInsertions'" style="font-size:19px;">Mes Insertions</button>
+    </div>
+</div>
+
 <h1>Mes informations</h1>

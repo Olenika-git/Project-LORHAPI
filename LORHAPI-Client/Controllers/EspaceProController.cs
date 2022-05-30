@@ -24,5 +24,10 @@ namespace LORHAPI_Client.Controllers
         {
             return View();
         }
+
+        public IActionResult ListeOrganisation()
+        {
+            return View();
+        }
     }
 }

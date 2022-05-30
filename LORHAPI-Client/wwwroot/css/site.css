@@ -216,9 +216,11 @@ testAki {
 
 .ButtonType {
     border-radius: 25px;
-    box-shadow: 5px 5px 5px gray;
+    box-shadow: 12px 12px 2px 1px gray;
     font-family: Calibri;
     text-align: center;
+    font-weight:700;
+    width:20px;
 }
 .Line {
 width:1px;
