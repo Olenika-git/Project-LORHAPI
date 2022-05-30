@@ -5,7 +5,7 @@ namespace LORHAPI_API
 {
     public static class Extensions
     {
-        public static UserDto AsDto(this User user) //Extension Method
+        public static UserDto AsDto(this User user) //Extension Method User => EnTantQueDTO
         {
             return new UserDto
             {

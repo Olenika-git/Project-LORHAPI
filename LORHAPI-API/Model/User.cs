@@ -30,5 +30,9 @@ namespace LORHAPI_API.Model
             LastConnectionDateTime = lastConnectionDateTime;
             OrgName = orgName;
         }
+
+        public User()
+        {
+        }
     }
 }
