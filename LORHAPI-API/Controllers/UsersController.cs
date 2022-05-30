@@ -63,10 +63,26 @@ namespace LORHAPI_API.Controllers
         [HttpGet ("{id}")]
         public async Task<ActionResult<UserDto>> GetUserByID(int id)
         {
+            User user;
+            try
+            {
+                user = await repository.GetUserByIdAsync(id);
 
-            User user = await repository.GetUserByIdAsync(id);
+                if(user == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(user);
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
-            return user.AsDto();
+            return NotFound();
         }
 
         //[HttpPost]

@@ -14,30 +14,33 @@ namespace LORHAPI_API.Repositories
         public UserRepository(Db_Context context)
         {
             _dbcontext = context;  //on assigne le Db_Context
+            UserList = _dbcontext.Users.ToList();
         }
 
         public async Task<List<User>> GetUsersAsync()
         {
-            UserList = _dbcontext.Users.ToList();
-
             return await Task.FromResult(UserList);
         }
+
         public async Task<User> GetUserByIdAsync(int id)
         {
             User user = UserList.Where(theUser => theUser.IdClient == id).SingleOrDefault();
             return await Task.FromResult(user);
         }
+
         public async Task CreateUserAsync(User user)
         {
             UserList.Add(user);
             await Task.CompletedTask;
         }
+
         public async Task UpdateUserAsync(User user)
         {
             int index = UserList.FindIndex(ExistingUser => ExistingUser.IdClient == user.IdClient);
             UserList[index] = user;
             await Task.CompletedTask;
         }
+
         public async Task DeleteUserAsync(int id)
         {
             int index = UserList.FindIndex(ExistingUser => ExistingUser.IdClient ==id);
