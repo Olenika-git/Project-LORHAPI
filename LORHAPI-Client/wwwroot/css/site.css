@@ -219,13 +219,9 @@ testAki {
     box-shadow: 5px 5px 5px gray;
     font-family: Calibri;
     text-align: center;
-    height: 20px;
 }
 .Line {
 width:1px;
 height:5px;
 }
 
-.ButtonHeader{
-    font-size:20px
-}
