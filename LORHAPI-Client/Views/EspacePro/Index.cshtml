@@ -8,10 +8,10 @@
 </div>
 <div>
     <div class="ButtonHeader row justify-content-center position-relative" style="bottom:25px">
-        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" style="font-size:19px;">Accueil</button>
-        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" style="font-size:19px;">Mes informations</button>
-        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" style="font-size:19px;">Liste des organisations</button>
-        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" style="font-size:19px;">Mes Insertions</button>
+        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" runat="server" onclick="Accueil_Click" style="font-size:19px;">Accueil</button>
+        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" onclick="Info_Click" style="font-size:19px;">Mes informations</button>
+        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" onclick="Organisations_Click" style="font-size:19px;">Liste des organisations</button>
+        <button class="ButtonType  col-md-2 ml-md-2 btn-outline-primary" onclick="Insertion_Click" style="font-size:19px;">Mes Insertions</button>
     </div>
 </div>
 <div class="HomePagePro position-relative col-md-7 pb-md-5" style="text-align:center;background-color:lightblue;left:19%; right:auto">
@@ -24,5 +24,7 @@
         Patchnotes
     </div>
 </div>
+
+<script runat="server"></script>
 
 
