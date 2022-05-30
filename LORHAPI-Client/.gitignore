@@ -1,0 +1,50 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*/obj
+*/bin
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+/.vs
+/Debug
+/build
+/*.suo
+/obj
+/debug
+.vs
+
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile.Android/obj
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile.iOS/obj
+*LORHAPI-ClientMobile/LORHAPI-ClientMobile/obj
+*LORHAPI-API/obj
+LORHAPI-API/appsettings.json
+*LORHAPI-Client/obj
+*LORHAPI-Client/bin
+*.props
