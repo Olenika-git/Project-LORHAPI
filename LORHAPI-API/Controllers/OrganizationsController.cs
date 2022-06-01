@@ -13,10 +13,10 @@ namespace LORHAPI_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class OrganizationsController : Controller
+    public class OrganizationsController : ControllerBase
     {
         private readonly Db_Context OrganizationContext; //Injection de Dépendances
-        private readonly ILogger<OrganizationsController> _logger; //INjecion de dépendances
+        private readonly ILogger<OrganizationsController> _logger; //Injection de dépendances
 
         public OrganizationsController(ILogger<OrganizationsController> logger, Db_Context context)
         {
@@ -51,8 +51,6 @@ namespace LORHAPI_API.Controllers
         [HttpGet("{orgName}")]
         public ActionResult<List<Organization>> GetOrganizationByName(string orgName) //ActionResult sert à renvoyer plusieurs valeur selon la conditions
         {
-
-
             if (OrganizationContext.Organizations.Find(orgName) is null)
             {
                 return NotFound();

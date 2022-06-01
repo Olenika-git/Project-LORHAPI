@@ -2,17 +2,20 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace LORHAPI_API.Dtos
+namespace LORHAPI_API.Dtos.UserDtos
 {
-    public record UpdateUserDto
+    public record CreateUserDto
     {
         [Required]
         public string Email { get; set; }
 
         [Required]
         public string Password { get; set; }
-        
-        
+
+        [Required]
+        public int IdOrganization { get; set; }
+
+
         /// <summary>
         /// Return the Last ID of user used in the Database
         /// </summary>

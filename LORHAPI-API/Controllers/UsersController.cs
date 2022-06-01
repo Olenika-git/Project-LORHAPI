@@ -1,5 +1,5 @@
 ﻿using LORHAPI_API.Data;
-using LORHAPI_API.Dtos;
+using LORHAPI_API.Dtos.UserDtos;
 using LORHAPI_API.Model;
 using LORHAPI_API.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -105,10 +105,10 @@ namespace LORHAPI_API.Controllers
                     IdClient = CreateUser.GetNextID(UserContext),
                     Email = CreateUser.Email,
                     Password = CreateUser.Password,
-                    isActive = true,
+                    IsActive = true,
                     UserType = 0,
                     CreationDateTime = DateTime.Now,
-                    OrgName = "Pôle Emploi"
+                    IdOrganization = CreateUser.IdOrganization
 
                 };
 
