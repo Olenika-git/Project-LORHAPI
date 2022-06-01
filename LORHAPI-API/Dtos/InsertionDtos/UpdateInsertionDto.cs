@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LORHAPI_API.Data;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace LORHAPI_API.Model
+namespace LORHAPI_API.Dtos.InsertionDtos
 {
-    public class Insertion
+    public record UpdateInsertionDto
     {
-        [Key]
-        public int IdInsertion { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public int AgeMin { get; set; }
@@ -20,10 +17,10 @@ namespace LORHAPI_API.Model
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
         public string RedirectionLink { get; set; }
-        public int IdOrganization { get; set; }
         public string DiplomeRequis { get; set; }
         public string DiplomeObtenu { get; set; }
         public int IdSecteur { get; set; }
+        
 
 
     }

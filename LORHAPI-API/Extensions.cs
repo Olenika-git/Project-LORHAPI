@@ -1,4 +1,5 @@
-﻿using LORHAPI_API.Dtos.OrganizationDtos;
+﻿using LORHAPI_API.Dtos.InsertionDtos;
+using LORHAPI_API.Dtos.OrganizationDtos;
 using LORHAPI_API.Dtos.UserDtos;
 using LORHAPI_API.Model;
 
@@ -31,6 +32,28 @@ namespace LORHAPI_API
                 Adress = organization.Adress,
                 ZIP = organization.ZIP,
                 City = organization.City,
+            };
+        }
+
+        public static InsertionDto AsDto(this Insertion insertion) //Extension Method Insertion => EnTantQueDTO
+        {
+            return new InsertionDto
+            {
+                IdInsertion = insertion.IdInsertion,
+                Title = insertion.Title,
+                Description = insertion.Description,
+                AgeMin = insertion.AgeMin,
+                AgeMax = insertion.AgeMax,
+                Salary = insertion.Salary,
+                Place = insertion.Place,
+                Duration = insertion.Duration,
+                DateDebut = insertion.DateDebut,
+                DateFin = insertion.DateFin,
+                RedirectionLink = insertion.RedirectionLink,
+                IdOrganization = insertion.IdOrganization,
+                DiplomeRequis = insertion.DiplomeRequis,
+                DiplomeObtenu = insertion.DiplomeObtenu,
+                IdSecteur = insertion.IdSecteur
             };
         }
     }

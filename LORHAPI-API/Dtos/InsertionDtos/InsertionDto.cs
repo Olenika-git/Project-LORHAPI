@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LORHAPI_API.Model
+namespace LORHAPI_API.Dtos.InsertionDtos
 {
-    public class Insertion
+    public record InsertionDto
     {
-        [Key]
         public int IdInsertion { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -24,7 +19,6 @@ namespace LORHAPI_API.Model
         public string DiplomeRequis { get; set; }
         public string DiplomeObtenu { get; set; }
         public int IdSecteur { get; set; }
-
 
     }
 }

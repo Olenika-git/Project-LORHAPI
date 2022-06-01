@@ -95,7 +95,7 @@ namespace LORHAPI_API.Controllers
         /// <param name="CreateOrganization"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<CreateOrganizationDto>> CreateOrganization(CreateOrganizationDto CreateOrganization)
+        public async Task<ActionResult<OrganizationDto>> CreateOrganization(CreateOrganizationDto CreateOrganization)
         {
             Organization organization = new();
 
@@ -139,10 +139,10 @@ namespace LORHAPI_API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateOrganization(int id, UpdateOrganizationDto organizationDto)
         {
-            Organization organization = new();
+            Organization existingOrganization = new();
             try
             {
-                Organization existingOrganization = await repository.GetOrganizationByIdAsync(id);
+                existingOrganization = await repository.GetOrganizationByIdAsync(id);
 
                 if (existingOrganization is null)
                 {

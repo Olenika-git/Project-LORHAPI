@@ -34,6 +34,7 @@ namespace LORHAPI_API
             services.AddControllers();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IOrganizationRepository, OrganizationRepository>();//Déclaration de l'injection de dépendancy
+            services.AddTransient<IInsertionRepository, InsertionRepository>();
             services.AddDbContext<Db_Context>(options => //ajout pour accès BDD
                                                         options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"))); //Connection Parts
 
