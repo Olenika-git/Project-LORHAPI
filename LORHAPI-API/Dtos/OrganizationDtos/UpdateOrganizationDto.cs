@@ -1,13 +1,11 @@
-﻿using System;
+﻿using LORHAPI_API.Data;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace LORHAPI_API.Dtos.OrganizationDtos
 {
-    public record OrganizationDto
+    public record UpdateOrganizationDto
     {
-        public int IdOrganization { get; set; }
-
-        public string OrgName { get; set; }
-
         public string Phone { get; set; }
 
         public string Adress { get; set; }
@@ -15,6 +13,5 @@ namespace LORHAPI_API.Dtos.OrganizationDtos
         public string ZIP { get; set; }
 
         public string City { get; set; }
-
     }
 }

@@ -21,7 +21,7 @@ namespace LORHAPI_API
             };
         }
 
-        public static OrganizationDto AsDto(this Organization organization) //Extension Method User => EnTantQueDTO
+        public static OrganizationDto AsDto(this Organization organization) //Extension Method Organization => EnTantQueDTO
         {
             return new OrganizationDto
             {

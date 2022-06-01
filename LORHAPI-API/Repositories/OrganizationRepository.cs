@@ -47,15 +47,15 @@ namespace LORHAPI_API.Repositories
 
         public async Task UpdateOrganizationAsync(Organization organization)
         {
-            int UserIndex = OrganizationList.FindIndex(ExistingOrga => ExistingOrga.IdOrganization == organization.IdOrganization);
+            int OrganizationIndex = OrganizationList.FindIndex(ExistingOrga => ExistingOrga.IdOrganization == organization.IdOrganization);
             
-            if (UserIndex == -1)
+            if (OrganizationIndex == -1)
             {
                 return;
             }
             else
             {
-                OrganizationList[UserIndex] = organization;
+                OrganizationList[OrganizationIndex] = organization;
                 _dbcontext.Update(organization);
                 await _dbcontext.SaveChangesAsync();
             }
