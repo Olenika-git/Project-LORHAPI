@@ -11,10 +11,11 @@ namespace LORHAPI_API.Model
         [Key]
         public int IdClient { get; set; }
         
-        public string Email { get; set; }
+        public string Mail { get; set; }
+
         public string Password { get; set; }
         public bool IsActive { get; set; }
-        public int UserType { get; set; }
+        public UserTypes UserType { get; set; }
         public DateTime CreationDateTime { get; set; }
         public DateTime LastConnectionDateTime { get; set; }
         public int IdOrganization { get; set; }
@@ -24,10 +25,10 @@ namespace LORHAPI_API.Model
             
         }
 
-        public User(int idClient, string email, string password, bool IsActive, int userType, DateTime creationDateTime, DateTime lastConnectionDateTime, int idOrganization)
+        public User(int idClient, string email, string password, bool IsActive, UserTypes userType, DateTime creationDateTime, DateTime lastConnectionDateTime, int idOrganization)
         {
             IdClient = idClient;
-            Email = email;
+            Mail = email;
             Password = password;
             this.IsActive = IsActive;
             UserType = userType;

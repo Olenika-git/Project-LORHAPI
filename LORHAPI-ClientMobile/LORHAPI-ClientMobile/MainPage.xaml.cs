@@ -10,6 +10,7 @@ namespace LORHAPI_ClientMobile
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
             InitializeComponent();

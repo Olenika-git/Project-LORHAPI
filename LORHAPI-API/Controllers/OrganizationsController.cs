@@ -103,7 +103,6 @@ namespace LORHAPI_API.Controllers
             {
                 organization = new()
                 {
-                    IdOrganization = CreateOrganization.GetNextID(OrganizationContext),
                     OrgName = CreateOrganization.OrgName,
                     Phone = CreateOrganization.Phone,
                     Adress = CreateOrganization.Adress,

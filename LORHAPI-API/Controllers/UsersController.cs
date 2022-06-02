@@ -102,11 +102,10 @@ namespace LORHAPI_API.Controllers
             {
                 user = new()
                 {
-                    IdClient = CreateUser.GetNextID(UserContext),
                     Email = CreateUser.Email,
                     Password = CreateUser.Password,
                     IsActive = true,
-                    UserType = 0,
+                    UserType = UserTypes.User,
                     CreationDateTime = DateTime.Now,
                     IdOrganization = CreateUser.IdOrganization
 

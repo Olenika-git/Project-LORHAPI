@@ -17,13 +17,13 @@ namespace LORHAPI_API.Model
         public double Salary { get; set; }
         public string Place { get; set; }
         public string Duration { get; set; }
-        public DateTime DateDebut { get; set; }
-        public DateTime DateFin { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string RedirectionLink { get; set; }
         public int IdOrganization { get; set; }
-        public string DiplomeRequis { get; set; }
-        public string DiplomeObtenu { get; set; }
-        public int IdSecteur { get; set; }
+        public string DegreeRequired { get; set; }
+        public string DegreeObtained { get; set; }
+        public int IdSector { get; set; }
 
 
     }

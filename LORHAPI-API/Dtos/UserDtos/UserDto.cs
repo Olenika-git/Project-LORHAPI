@@ -12,7 +12,7 @@ namespace LORHAPI_API.Dtos.UserDtos
 
         public bool isActive { get; set; }
 
-        public int UserType { get; set; }
+        public UserTypes UserType { get; set; }
 
         public DateTime CreationDateTime { get; set; }
 

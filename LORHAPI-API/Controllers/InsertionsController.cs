@@ -101,7 +101,6 @@ namespace LORHAPI_API.Controllers
             {
                 insertion = new()
                 {
-                    IdInsertion = CreateInsertion.GetNextID(InsertionContext),
                     Title = CreateInsertion.Title,
                     Description = CreateInsertion.Description,
                     AgeMin = CreateInsertion.AgeMin,
