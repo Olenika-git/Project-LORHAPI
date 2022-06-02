@@ -23,7 +23,7 @@ namespace LORHAPI_Client.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contactez_nous()
         {
             return View();
         }
