@@ -1,0 +1,28 @@
+﻿@using LORHAPI_Client.Areas.Users.Controllers
+@{
+    ViewData["Title"] = "Insertion page";
+}
+<div class="position-relative" style="height:200px;overflow:hidden; bottom:50px">
+    <img class="img-fluid position-relative " style="transform:translateY(-65px); " src="~/Images/banners/Jeune.jpg" />
+</div>
+<div>
+    <div class="ButtonHeader row justify-content-center position-relative" style="bottom:70px">
+        <button class="ButtonType btn btn-light col-md-2 ml-md-4 btn-outline-primary" onclick="window.location = 'EspacePro'" style="font-size:17px; ">Accueil</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-4 btn-outline-primary" onclick="window.location = 'EspacePro/MesInformations'" style="font-size:17px;">Mes informations</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-4 btn-outline-primary" onclick="window.location = 'EspacePro/ListeOrganisation'" style="font-size:17px;">Liste des organisations</button>
+        <button class="ButtonType btn btn-light col-md-2 ml-md-4 btn-outline-primary" onclick="window.location = 'EspacePro/MesInsertions'" style="font-size:17px;">Mes Insertions</button>
+    </div>
+</div>
+<div class="HomePagePro position-relative col-md-7 pb-md-5 mt-4" style="text-align:center;background-color:lightblue;left:19%; right:auto; bottom:70px">
+    <p>Bienvenue dans l'interface de gestion LorHapi</p>
+    <p>Vous pouvez changer vos informations personnelles en cliquant sur "Mes informations".</p>
+    <p>Vous Pouvez Gérer vos insertions en cliquant sur "Mes Insertions".</p>
+    <p>Toute l'équipe LorHapi vous souhaite une agréable journée.</p>
+    <div class="mt-md-1" style="height:1px; background-color:black;"></div>
+    <div class="PatchNotes mt-md-1">
+        Patchnotes
+    </div>
+</div>
+<script runat="server"></script>
+
+

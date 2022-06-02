@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LORHAPI_Client.Controllers
+namespace LORHAPI_Client.Areas.Admin
 {
+    [Area("Admin")]
     public class EspaceProController : Controller
     {
 

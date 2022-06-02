@@ -22,5 +22,6 @@ namespace LORHAPI_Client
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        
     }
 }

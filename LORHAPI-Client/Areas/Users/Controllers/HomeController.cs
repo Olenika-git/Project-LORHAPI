@@ -7,8 +7,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LORHAPI_Client.Controllers
+namespace LORHAPI_Client.Areas.Users.Controllers
 {
+    [Area ("Users")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -23,7 +24,7 @@ namespace LORHAPI_Client.Controllers
             return View();
         }
 
-        public IActionResult Contactez_nous()
+        public IActionResult Contactez_Nous()
         {
             return View();
         }
