@@ -102,7 +102,7 @@ namespace LORHAPI_API.Controllers
             {
                 user = new()
                 {
-                    Email = CreateUser.Email,
+                    Mail = CreateUser.Mail,
                     Password = CreateUser.Password,
                     IsActive = true,
                     UserType = UserTypes.User,
@@ -149,7 +149,7 @@ namespace LORHAPI_API.Controllers
                 }
                 else
                 {
-                    existingUser.Email = userDto.Email;
+                    existingUser.Mail = userDto.Mail;
                     existingUser.Password = userDto.Password;
 
                     await repository.UpdateUserAsync(existingUser);

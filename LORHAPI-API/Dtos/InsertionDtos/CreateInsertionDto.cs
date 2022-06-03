@@ -29,10 +29,10 @@ namespace LORHAPI_API.Dtos.InsertionDtos
         public string Duration { get; set; }
 
         [Required]
-        public DateTime DateDebut { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Required]
-        public DateTime DateFin { get; set; }
+        public DateTime EndDate { get; set; }
 
         [Required]
         public string RedirectionLink { get; set; }
@@ -41,13 +41,13 @@ namespace LORHAPI_API.Dtos.InsertionDtos
         public int IdOrganization { get; set; }
 
         [Required]
-        public string DiplomeRequis { get; set; }
+        public int DegreeRequired { get; set; }
 
         [Required]
-        public string DiplomeObtenu { get; set; }
+        public int DegreeObtained { get; set; }
 
         [Required]        
-        public int IdSecteur { get; set; }
+        public int IdSector { get; set; }
 
         /// <summary>
         /// Return the Last ID of user used in the Database

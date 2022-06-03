@@ -21,8 +21,8 @@ namespace LORHAPI_API.Model
         public DateTime EndDate { get; set; }
         public string RedirectionLink { get; set; }
         public int IdOrganization { get; set; }
-        public string DegreeRequired { get; set; }
-        public string DegreeObtained { get; set; }
+        public int DegreeRequired { get; set; }
+        public int DegreeObtained { get; set; }
         public int IdSector { get; set; }
 
 

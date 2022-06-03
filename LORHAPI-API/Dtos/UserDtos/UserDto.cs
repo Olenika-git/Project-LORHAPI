@@ -6,7 +6,7 @@ namespace LORHAPI_API.Dtos.UserDtos
     {
         public int IdClient { get; set; }
 
-        public string Email { get; set; }
+        public string Mail { get; set; }
 
         public string Password { get; set; }
 

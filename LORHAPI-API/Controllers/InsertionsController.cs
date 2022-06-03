@@ -108,13 +108,13 @@ namespace LORHAPI_API.Controllers
                     Salary = CreateInsertion.Salary,
                     Place = CreateInsertion.Place,
                     Duration = CreateInsertion.Duration,
-                    DateDebut = CreateInsertion.DateDebut,
-                    DateFin = CreateInsertion.DateFin,
+                    StartDate = CreateInsertion.StartDate,
+                    EndDate = CreateInsertion.EndDate,
                     RedirectionLink = CreateInsertion.RedirectionLink,
                     IdOrganization = CreateInsertion.IdOrganization,
-                    DiplomeRequis = CreateInsertion.DiplomeRequis,
-                    DiplomeObtenu = CreateInsertion.DiplomeObtenu,
-                    IdSecteur = CreateInsertion.IdSecteur,
+                    DegreeRequired = CreateInsertion.DegreeRequired,
+                    DegreeObtained = CreateInsertion.DegreeObtained,
+                    IdSector = CreateInsertion.IdSector,
                 };
                 
                 if (insertion == null)
@@ -163,12 +163,12 @@ namespace LORHAPI_API.Controllers
                     existingInsertion.Salary = insertionDto.Salary;
                     existingInsertion.Place = insertionDto.Place;
                     existingInsertion.Duration = insertionDto.Duration;
-                    existingInsertion.DateDebut = insertionDto.DateDebut;
-                    existingInsertion.DateFin = insertionDto.DateFin;
+                    existingInsertion.StartDate = insertionDto.StartDate;
+                    existingInsertion.EndDate = insertionDto.EndDate;
                     existingInsertion.RedirectionLink = insertionDto.RedirectionLink;
-                    existingInsertion.DiplomeRequis = insertionDto.DiplomeRequis;
-                    existingInsertion.DiplomeObtenu = insertionDto.DiplomeObtenu;
-                    existingInsertion.IdSecteur = insertionDto.IdSecteur;
+                    existingInsertion.DegreeRequired = insertionDto.DegreeRequired;
+                    existingInsertion.DegreeObtained = insertionDto.DegreeObtained;
+                    existingInsertion.IdSector = insertionDto.IdSector;
 
 
 

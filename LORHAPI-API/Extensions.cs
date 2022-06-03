@@ -12,7 +12,7 @@ namespace LORHAPI_API
             return new UserDto
             {
                 IdClient = user.IdClient,
-                Email    = user.Email,
+                Mail    = user.Mail,
                 Password = user.Password,
                 isActive = user.IsActive,
                 UserType = user.UserType,
@@ -47,13 +47,13 @@ namespace LORHAPI_API
                 Salary = insertion.Salary,
                 Place = insertion.Place,
                 Duration = insertion.Duration,
-                DateDebut = insertion.DateDebut,
-                DateFin = insertion.DateFin,
+                StartDate = insertion.StartDate,
+                EndDate = insertion.EndDate,
                 RedirectionLink = insertion.RedirectionLink,
                 IdOrganization = insertion.IdOrganization,
-                DiplomeRequis = insertion.DiplomeRequis,
-                DiplomeObtenu = insertion.DiplomeObtenu,
-                IdSecteur = insertion.IdSecteur
+                DegreeRequired = insertion.DegreeRequired,
+                DegreeObtained = insertion.DegreeObtained,
+                IdSector = insertion.IdSector
             };
         }
     }
