@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LORHAPI_Client.Areas.Users.Controllers
+namespace LORHAPI_Client.Areas.Basic.Controllers
 {
     [Area("Users")]
     public class EspaceProController : Controller
@@ -15,21 +15,5 @@ namespace LORHAPI_Client.Areas.Users.Controllers
         {
             return View();
         }
-
-        public IActionResult MesInformations()
-        {
-            return View();
-        }
-
-        public IActionResult MesInsertions()
-        {
-            return View();
-        }
-
-        public IActionResult ListeOrganisation()
-        {
-            return View();
-        }
-
     }
 }
