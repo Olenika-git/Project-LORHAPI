@@ -62,6 +62,8 @@ namespace LORHAPI_Client
                     name: "AreaBasic",
                     areaName: "Basic",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    )
             });
         }
     }
