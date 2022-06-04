@@ -18,3 +18,7 @@ This project contain an API, an website in asp.net and a mobile application deve
 
 
 The Website and Mobile App will querry the API to communicate with the Database.
+
+We developped this app to use Mysql.
+
+You can consult the API documentations by using the path : /swagger/index.html
