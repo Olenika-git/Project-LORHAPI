@@ -1,10 +1,12 @@
-﻿using LORHAPI_Client.Models;
+﻿using LORHAPI_Client.Areas.User.Models;
+using LORHAPI_Client.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LORHAPI_Client.Controllers
@@ -18,9 +20,37 @@ namespace LORHAPI_Client.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        // GET: Student
+        public ActionResult Index()
         {
-            return View();
+            List<User> users = null;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:5001/");
+                //HTTP GET
+                var responseTask = client.GetAsync("users");
+                responseTask.Wait();
+                
+                var result = responseTask.Result;
+                
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<List<User>>();
+                    readTask.Wait();
+
+                    users = readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                  
+                    
+                    
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return View(users);
         }
 
         public IActionResult Privacy()

@@ -2,18 +2,18 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="container-fluid p-0">
+<div class="container-fluid pr-0 pl-0 position-relative" style="bottom:50px">
     <div class="" style="height:200px;overflow:hidden;">
-        <img class="img-fluid " style="transform:translateY(-65px)" src="~/Images/banners/Jeune.jpg"/>
+        <img class="img-fluid position-relative " style="transform:translateY(-65px); " src="~/Images/banners/Jeune.jpg" />
     </div>
+</div>
 
-    @*<div class="" style="margin-top:8px;">  FCT DE RECHERCHE
-        @using (Html.BeginForm("Index", "HomeController", FormMethod.Get))
-        {
-            <ul class="nav navbar-nav testAki">
-                <li>@Html.TextBox("id", ViewBag.CurrentFilter as string)</li>
-                <li><input type="submit" value="Search" /></li>
-            </ul>
-        }
-    </div>*@
+<input type="text" id="BarreRecherche" class="position-relative col-6" placeholder="Barre de recherche" style="bottom:170px;left:23%; font-size:25px" />
+
+<div class="ChampFiltre">
+
+</div>
+
+<div class="ListeInsertion">
+
 </div>
