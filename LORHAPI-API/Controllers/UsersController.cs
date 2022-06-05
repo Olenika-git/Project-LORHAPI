@@ -42,17 +42,18 @@ namespace LORHAPI_API.Controllers
             try
             {
                 UserList = (await repository.GetUsersAsync()).Select(user => user.AsDto()).ToList();
-
-            }
-            finally
-            {
+                
                 _logger.LogInformation($"{DateTime.UtcNow.ToString("hh:mm:ss")}: Retrieved {UserList.Count()}");
+                
 
-
+                return await Task.FromResult(UserList);
             }
-
-            return await Task.FromResult(UserList);
-
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error while getting User: {ex.Message}");
+                
+                return StatusCode(500, $"Error while getting User: {ex.Message}");
+            }
         }
 
         // GET /Users/id
@@ -61,7 +62,7 @@ namespace LORHAPI_API.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>User</returns>
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDto>> GetUserByID(int id)
         {
             User user;
@@ -79,12 +80,12 @@ namespace LORHAPI_API.Controllers
                     return Ok(user.AsDto());
                 }
             }
-            catch (ArgumentNullException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-            }
+                _logger.LogError($"Error while getting UserID: {ex.Message}");
 
-            return NotFound();
+                return StatusCode(500, $"Error while getting UserID: {ex.Message}");
+            }
         }
 
         //POST /Users
@@ -97,9 +98,12 @@ namespace LORHAPI_API.Controllers
         public async Task<ActionResult<CreateUserDto>> CreateUser(CreateUserDto CreateUser)
         {
             User user = new();
-
+            
             try
             {
+                User CheckEmailFirst = UserContext.Users.Where(u => u.Mail == CreateUser.Mail).FirstOrDefault();
+                
+                
                 user = new()
                 {
                     Mail = CreateUser.Mail,
@@ -111,19 +115,29 @@ namespace LORHAPI_API.Controllers
 
                 };
 
+                
                 if (user == null)
                 {
                     return NotFound();
                 }
-                else
+                if (CheckEmailFirst != null)
                 {
-                    await repository.CreateUserAsync(user);
-
+                    ModelState.AddModelError("Mail", "Sorry, this email is already used");
+                    return BadRequest(ModelState);
                 }
+                if (user.IdOrganization == 0)
+                {
+                    ModelState.AddModelError("IdOrganization", "Invalid Organization");
+                    return BadRequest(ModelState);
+                }
+                
+                await repository.CreateUserAsync(user);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                _logger.LogError($"Error while creating User: {ex.Message}");
+
+                return StatusCode(500, $"Error while creating User: {ex.Message}");
             }
 
             return CreatedAtAction(nameof(GetUserByID), new { id = user.IdClient }, user.AsDto());
@@ -136,7 +150,7 @@ namespace LORHAPI_API.Controllers
         /// <param name="id">User ID</param>
         /// <param name="userDto">User Entry</param>
         /// <returns></returns>
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> UpdateUser(int id, UpdateUserDto userDto)
         {
             try
@@ -165,7 +179,7 @@ namespace LORHAPI_API.Controllers
         }
 
         //Delete /Users/{id}
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             try

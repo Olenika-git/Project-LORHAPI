@@ -62,7 +62,7 @@ namespace LORHAPI_API.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Organization</returns>
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<OrganizationDto>> GetOrganizationByID(int id)
         {
             Organization organization;
@@ -135,7 +135,7 @@ namespace LORHAPI_API.Controllers
         /// <param name="id">User ID</param>
         /// <param name="UpdateOrganizationDto">Organization Entry</param>
         /// <returns></returns>
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> UpdateOrganization(int id, UpdateOrganizationDto organizationDto)
         {
             Organization existingOrganization = new();
@@ -167,7 +167,7 @@ namespace LORHAPI_API.Controllers
         }
 
         //Delete /Organization/{id}
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             try

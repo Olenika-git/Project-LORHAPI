@@ -68,7 +68,7 @@ namespace LORHAPI_API.Repositories
             int UserIndex = UserList.FindIndex(ExistingUser => ExistingUser.IdClient == id);
             User user = UserList.Where(theUser => theUser.IdClient == id).SingleOrDefault();
 
-            if (UserIndex == -1 || UserIndex == 0)
+            if (UserIndex == -1)
             {
                 return;
             }

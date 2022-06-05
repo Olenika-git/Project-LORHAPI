@@ -60,7 +60,7 @@ namespace LORHAPI_API.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Insertion</returns>
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<InsertionDto>> GetInsertionByID(int id)
         {
             Insertion insertion;
@@ -142,7 +142,7 @@ namespace LORHAPI_API.Controllers
         /// <param name="id">User ID</param>
         /// <param name="UpdateInsertionDto">Insertion Entry</param>
         /// <returns></returns>
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> UpdateInsertion(int id, UpdateInsertionDto insertionDto)
         {
             Insertion existingInsertion = new();
@@ -185,7 +185,7 @@ namespace LORHAPI_API.Controllers
         }
 
         //Delete /Insertion/{id}
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteInsertion(int id)
         {
             try
