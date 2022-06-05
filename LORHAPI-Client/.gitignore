@@ -49,3 +49,4 @@ LORHAPI-API/appsettings.json
 *LORHAPI-Client/bin
 *.props
 *launchSettings.json
+/launchSettings.json
