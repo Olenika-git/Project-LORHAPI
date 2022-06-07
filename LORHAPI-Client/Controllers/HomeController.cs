@@ -28,6 +28,7 @@ namespace LORHAPI_Client.Controllers
         {
             List<Insertion> insertions = new List<Insertion>();
             HttpClient client  = _api.Initial();
+            
             HttpResponseMessage response = client.GetAsync("/Insertions").Result;
             if (response.IsSuccessStatusCode)
             {

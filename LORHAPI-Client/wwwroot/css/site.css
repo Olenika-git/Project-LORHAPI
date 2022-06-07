@@ -1,28 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-}
 
-/* Provide sufficient contrast against white background */
-a {
-    color: #0366d6;
-}
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -74,7 +55,7 @@ body {
 }
 
 
-/*header SECTION*/
+/*Header SECTION*/
 .TitleHeader {
     font: normal normal normal 60px/78px Lorhapi;
     letter-spacing: 0px;
@@ -89,6 +70,7 @@ body {
 
 .HeaderBgColor {
     background-color: #0B2769;
+    height:150px;
 }
 
 .BtnHeader {
@@ -96,6 +78,11 @@ body {
     box-shadow: 6px 6px 0px #00000029;
     border-radius: 20px;
     opacity: 1;
+}
+
+NoDecoration {
+    text-decoration: none !important;
+    color: white;
 }
 
 
@@ -191,17 +178,3 @@ nav ul li span:nth-child(4) {
     --n: 4;
 }
 /*End BtnHeader Section*/
-
-
-
-
-testAki {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 14px;
-    opacity: 1;
-}
-
-
-
-
