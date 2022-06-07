@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 <body>
+<section id="header">
     <header>
         <nav class="HeaderBgColor">
             <div class="container-fluid">
@@ -32,12 +33,13 @@
             </div>
         </nav>
     </header>
-    
+</section>  
+
         <main role="main" class="">
             @RenderBody()
         </main>
    
-
+<section id="footer">
     <footer class="border-top footer FooterBgColor">
         <div class="container-fluid d-flex flex-row justify-content-around pt-2 pb-2">
 
@@ -68,6 +70,7 @@
             
         </div>
     </footer>
+</section>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
