@@ -1,61 +1,24 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-
-
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
+/* Start Media Queries */
+@media (max-width: 575.98px) {
+    .test{
+        height:100px;
     }
 }
+/* End Media Queries */
 
-.border-top {
-    border-top: 1px solid #e5e5e5;
+/* Start Reset Section */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+/* End Reset Section */
 
-.border-bottom {
-    border-bottom: 1px solid #e5e5e5;
-}
+/* Start Header Section */
 
-.box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
-}
-
-
-/*Header SECTION*/
 .TitleHeader {
     font: normal normal normal 60px/78px Lorhapi;
     letter-spacing: 0px;
@@ -70,7 +33,6 @@ body {
 
 .HeaderBgColor {
     background-color: #0B2769;
-    height:150px;
 }
 
 .BtnHeader {
@@ -84,21 +46,8 @@ NoDecoration {
     text-decoration: none !important;
     color: white;
 }
+/* Start HeaderBtnEffect Section */
 
-
-/* Footer Parts*/
-
-.FooterBgColor {
-    background-color: #0B2769;
-}
-
-@font-face {
-    font-family: 'Lorhapi'; /*a name to be used later*/
-    src: url('../fonts/Blank River.ttf'); /*URL to font*/
-}
-
-
-/*HeaderBtnEffect*/
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -158,9 +107,9 @@ nav ul li:hover {
     color: white;
 }
 
-    nav ul li:hover span {
-        transform: translateY(0) scale(2);
-    }
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
 
 nav ul li span:nth-child(1) {
     --n: 1;
@@ -177,4 +126,25 @@ nav ul li span:nth-child(3) {
 nav ul li span:nth-child(4) {
     --n: 4;
 }
-/*End BtnHeader Section*/
+/* End BtnHeader Section */
+
+/* End Header Section */
+
+/* Start Footer Section */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+.FooterBgColor {
+    background-color: #0B2769;
+}
+
+@font-face {
+    font-family: 'Lorhapi'; /*a name to be used later*/
+    src: url('../fonts/Blank River.ttf'); /*URL to font*/
+}
+/* End Footer Section */

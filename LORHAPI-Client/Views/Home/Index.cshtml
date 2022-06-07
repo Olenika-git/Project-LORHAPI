@@ -4,12 +4,32 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container-fluid pr-0 pl-0 position-relative" style="bottom:50px">
-    <div class="" style="height:200px;overflow:hidden;filter: blur(1.5px);">
-        <img class="img-fluid position-relative " style="transform:translateY(-65px); " src="~/Images/banners/Jeune.jpg" />
+<div class="container-fluid p-0">
+    <div class="d-flex flex-nowrap test">
+        <img class="w-100" src="~/Images/banners/Jeune.jpg" />
     </div>
 
-<input type="text" id="BarreRecherche" class="position-relative col-6" placeholder="Barre de recherche" style="bottom:170px;left:23%; font-size:25px" />
+<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
 
 </div>
 
