@@ -7,6 +7,13 @@ for details on configuring this project to bundle and minify static web assets. 
         height:100px;
     }
 }
+
+body {
+    height:100%;
+}
+html {
+    height:100%;
+}
 /* End Media Queries */
 
 /* Start Reset Section */
@@ -148,3 +155,11 @@ nav ul li span:nth-child(4) {
     src: url('../fonts/Blank River.ttf'); /*URL to font*/
 }
 /* End Footer Section */
+.BlueItem {
+    background-color: #E6ECFB;
+    border-color: #CED9F7;
+}
+
+.ButtonBorder {
+    border-radius: 3px;
+}
