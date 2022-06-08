@@ -5,35 +5,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid p-0">
-    <div class="d-flex flex-nowrap test">
+    <div class="d-flex flex-nowrap MH100MQueries BannerMaxHeight">
         <img class="w-100" src="~/Images/banners/Jeune.jpg" />
     </div>
-
-<div class="row justify-content-center">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <form class="card card-sm">
-                                <div class="card-body row no-gutters align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fas fa-search h4 text-body"></i>
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col-auto">
-                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
-                                    </div>
-                                    <!--end of col-->
-                                </div>
-                            </form>
-                        </div>
-                        <!--end of col-->
-                    </div>
+    
+    <div class="SearchBarPosition SearchBarPositionMobile searchWidth searchWidthMobile">
+           <div id="custom-search-input w-100 glyphicon">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary h-100" type="button">
+                                        <span class="glyphicon bi-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+           </div>
+	</div>
+    
 
 </div>
 
 <h1>Index</h1>
+<span class="glyphicon bi-123"></span>
 <p>
     <a asp-action="Privacy">Create New</a>
 </p>
