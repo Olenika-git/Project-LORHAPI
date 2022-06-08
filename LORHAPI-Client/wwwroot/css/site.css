@@ -227,5 +227,14 @@ nav ul li span:nth-child(4) {
     width:50%;
     height:50px;
     justify-self:center;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:aqua;
+    margin-top:50px;
+    border-radius:3px;
+}
+
+.testBorder {
+    border-radius: 3px,0,0,3px;
 }
 /* End SearchFilter Section */
