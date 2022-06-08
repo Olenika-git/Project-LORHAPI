@@ -4,86 +4,75 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LORHAPI_Client</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
 </head>
 <body>
+<section id="header">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 HeaderBgColor">
-            <div class="container">
+        <nav class="HeaderBgColor">
+            <div class="container-fluid">
+                <ul class="w-100 justify-content-between d-flex align-items-center">
 
+                    <li class="">
+                        <a class="noDecoWithFontFamily" asp-controller="Home" asp-action="Index">Espace Pro</a>
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    
 
-                <div class="BtnHeader">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Espace Pro</a>
-                </div>
-                
-                <a class="navbar-brand justify-content-center TitleHeader" asp-area="" asp-controller="Home" asp-action="Index">LorHapi</a>
+                    <li class="title">
+                        <a class="TitleHeader NoDecoration" asp-area="" asp-controller="Home" asp-action="Index">LorHapi</a>
+                    </li>
 
-                <div class="BtnHeader">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contactez-Nous</a>
-                </div>
-                
+                    <li class="">
+                        <a class="noDecoWithFontFamily" asp-area="" asp-controller="Home" asp-action="Privacy">Contactez-Nous</a>
+                        <span></span><span></span><span></span><span></span>
+                    </li>
 
-
-
-                @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>*@
-
-                @*<div class="navbar-collapse collapse d-sm-inline-flex">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-            </ul>
-        </div>*@
+                </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+</section>  
+
+        <main role="main" class="">
             @RenderBody()
         </main>
-    </div>
+   
+<section id="footer">
+    <footer class="border-top footer FooterBgColor">
+        <div class="container-fluid d-flex flex-row justify-content-around pt-2 pb-2">
 
-    <footer class="border-top footer HeaderBgColor">
-        <div class="container text-center justify-content-around d-flex">
+            <div class="container d-flex flex-row justify-content-around">
 
-            <div class=" container d-flex justify-content-around">
-
-                <div>
-                    <img height="50" width="50" src="~/Images/logos/armee.png" />
-                </div>
-
-                <div>
-                    <img height="50" width="50" src="~/Images/logos/poleEmploi.png" />
-                </div>
+                
+                    <img class="rounded" height="60" width="60" src="~/Images/logos/armee.png" />
+                
+                    <img class="rounded" height="60" width="60" src="~/Images/logos/pe.png" />
+                
                     
             </div>
             
-            <div class="container d-flex justify-content-around ml-5 mr-5">
-                <a class="text-center" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
+            <div class="container d-flex flex-row justify-content-around align-items-center">
+                <a class="noDecoWithFontFamily" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
             </div>
             
 
-            <div class="container d-flex justify-content-around">
+            <div class="container d-flex flex-row justify-content-around">
 
-                <div>
-                    <img height="50" width="50" src="~/Images/logos/aki.png" />
-                </div>
-
-                <div>
-                    <img height="50" width="50" src="~/Images/logos/Mlocale.png" />
-                </div>
+                
+                    <img class="rounded" height="60" width="60" src="~/Images/logos/smv.png" />
+                
+                    <img class="rounded" height="60" width="60" src="~/Images/logos/ml.png" />
+                
                 
              </div>
             
         </div>
     </footer>
+</section>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

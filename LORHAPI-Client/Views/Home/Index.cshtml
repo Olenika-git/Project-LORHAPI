@@ -1,8 +1,141 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<LORHAPI_Client.Models.Insertion>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid p-0">
+    <div class="d-flex flex-nowrap MH100MQueries BannerMaxHeight">
+        <img class="w-100" src="~/Images/banners/Jeune.jpg" />
+    </div>
+    
+    <div class="SearchBarPosition SearchBarPositionMobile searchWidth searchWidthMobile">
+           <div id="custom-search-input w-100 glyphicon">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary h-100" type="button">
+                                        <span class="glyphicon bi-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+           </div>
+	</div>
+    
+
 </div>
+
+<h1>Index</h1>
+<span class="glyphicon bi-123"></span>
+<p>
+    <a asp-action="Privacy">Create New</a>
+</p>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdInsertion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Place)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RedirectionLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdOrganization)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreeRequired)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreeObtained)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdSector)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdInsertion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgeMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgeMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Place)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedirectionLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOrganization)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreeRequired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreeObtained)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSector)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
