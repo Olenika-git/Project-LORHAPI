@@ -14,10 +14,10 @@
                 <ul class="w-100 justify-content-between d-flex align-items-center">
 
                     <li class="">
-                        <a class="noDecoWithFontFamily" asp-controller="Home" asp-action="Index">Espace Pro</a>
+                        <a class="noDecoWithFontFamily" asp-controller="Home" asp-action="ConnectionPage">Espace Pro</a>
                         <span></span><span></span><span></span><span></span>
                     </li>
-                    
+
 
                     <li class="title">
                         <a class="TitleHeader NoDecoration" asp-area="" asp-controller="Home" asp-action="Index">LorHapi</a>
@@ -32,42 +32,43 @@
             </div>
         </nav>
     </header>
-    
-        <main role="main" class="">
-            @RenderBody()
-        </main>
-   
 
-    <footer class="border-top footer FooterBgColor">
-        <div class="container-fluid d-flex flex-row justify-content-around pt-2 pb-2">
+    <main role="main" class="">
+        @RenderBody()
+    </main>
 
-            <div class="container d-flex flex-row justify-content-around">
+    <div style="">
+        <footer class="border-top footer FooterBgColor">
+            <div class="container-fluid d-flex flex-row justify-content-around pt-2 pb-2">
 
-                
+                <div class="container d-flex flex-row justify-content-around">
+
+
                     <img class="rounded" height="60" width="60" src="~/Images/logos/armee.png" />
-                
+
                     <img class="rounded" height="60" width="60" src="~/Images/logos/pe.png" />
-                
-                    
-            </div>
-            
-            <div class="container d-flex flex-row justify-content-around align-items-center">
-                <a class="noDecoWithFontFamily" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
-            </div>
-            
 
-            <div class="container d-flex flex-row justify-content-around">
 
-                
+                </div>
+
+                <div class="container d-flex flex-row justify-content-around align-items-center">
+                    <a class="noDecoWithFontFamily" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
+                </div>
+
+
+                <div class="container d-flex flex-row justify-content-around">
+
+
                     <img class="rounded" height="60" width="60" src="~/Images/logos/smv.png" />
-                
+
                     <img class="rounded" height="60" width="60" src="~/Images/logos/ml.png" />
-                
-                
-             </div>
-            
-        </div>
-    </footer>
+
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
