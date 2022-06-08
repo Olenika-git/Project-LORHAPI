@@ -23,15 +23,59 @@
 	</div>
 </div>
 
-<div class="container">
-    <div class="flex-column align-content-center align-self-center FilterSize testBorder">
+<div class="container FilterSize justify-content-center">
+    <div class="flex-column align-self-center">
         <div class="d-flex flex-row justify-content-around">
-            <div>Age<div class=""></div></div>
-            <div>Departement</div>
+            <div class="ContainerFilterSizing text-center">
+                <p>Age</p>
+                <div class="d-flex flex-row justify-content-between mw-50">
+                    <input class="AgeValue" type="text" id="fname" name="fname" value="0"><br><br>
+                    <div class="SliderAge" id="slider"></div>
+                    <input class="AgeValue" type="text" id="fname" name="fname" value="0"><br><br>
+                </div>
+            </div>
+            
+            <div class="ContainerFilterSizing text-center">
+                <p>Département</p>
+                <div class="btn-group dropright">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    00 - Département
+                  </button>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">01 - Chez Gilles</a>
+                      <a class="dropdown-item" href="#">02 - Chez Gaetan</a>
+                  </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex flex-row justify-content-around">
-            <div>SecteurActivité</div>
-            <div>DiplomeRequis</div>
+            <div class="ContainerFilterSizing text-center">               
+                <p>SecteurActivité</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Marketing</a>
+                    <a class="dropdown-item" href="#">Finance</a>
+                    <a class="dropdown-item" href="#">Maraudeur</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ContainerFilterSizing text-center">
+                <p>DiplômeRequis</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">CAP</a>
+                    <a class="dropdown-item" href="#">BEP</a>
+                    <a class="dropdown-item" href="#">BAC</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>    
 </div>
