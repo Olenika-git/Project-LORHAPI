@@ -1,19 +1,32 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/* Start Media Queries */
+/* Start Media Queries Mobile */
 @media (max-width: 575.98px) {
-    .test{
+    
+    .MH100MQueries{
         height:100px;
+    }
+
+    .searchWidthMobile {
+        width: 200px !important;
+    }
+
+    .SearchBarPositionMobile {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 18%;
+        width: 100%;
     }
 }
 
-body {
-    height:100%;
+.BannerMaxHeight{
+    max-height:200px;
 }
-html {
-    height:100%;
-}
+
 /* End Media Queries */
 
 /* Start Reset Section */
@@ -155,11 +168,55 @@ nav ul li span:nth-child(4) {
     src: url('../fonts/Blank River.ttf'); /*URL to font*/
 }
 /* End Footer Section */
-.BlueItem {
-    background-color: #E6ECFB;
-    border-color: #CED9F7;
+
+/* Start SearchBar Section */
+
+.SearchBarPosition {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 22%;
+    width: 100%;
 }
 
-.ButtonBorder {
-    border-radius: 3px;
+#custom-search-input {
+    margin: 0;
+    padding: 0;
 }
+
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color: #D9230F;
+    }
+
+.search-query:focus + button {
+    z-index: 3;
+}
+
+.searchWidth{
+    width:400px;
+}
+/* End SearchBar Section */
