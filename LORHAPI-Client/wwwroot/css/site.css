@@ -253,3 +253,30 @@ nav ul li span:nth-child(4) {
     width: 6em;
 }
 /* End SearchFilter Section */
+.BlueItem {
+    background-color: #E6ECFB;
+    border-color: #CED9F7;
+}
+/*
+    ButtonHeader
+*/
+.ButtonBorder {
+    border-radius: 3px;
+}
+
+.ButtonHead {
+    border-radius: 17px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-left: 2%;
+    padding-right: 2%;
+    max-width: 300px;
+    text-align: center;
+    flex: auto;
+    display:flex;
+}
+.MarginCenter {
+    margin-left:2%;
+}
+
+
