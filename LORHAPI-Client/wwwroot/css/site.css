@@ -273,7 +273,7 @@ nav ul li span:nth-child(4) {
     padding-right: 2%;
     max-width: 100%;
     text-align: center;
-    flex-wrap: wrap;
     flex: auto;
+    display:flex;
 }
 
