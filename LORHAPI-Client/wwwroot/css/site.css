@@ -33,6 +33,10 @@ body{
         top: 18%;
         width: 100%;
     }
+    
+    .testBanner{
+        font-size:10px !important;
+    }
 }
 
 /* End Media Queries */
@@ -102,7 +106,7 @@ nav ul {
 a.noDecoWithFontFamily {
     text-decoration: none !important;
     color: white !important;
-    font: normal normal normal 18px/24px Yu Gothic UI !important;
+    font: normal normal normal 18px/24px Yu Gothic UI;
 }
 a.NoDecoration {
     text-decoration: none !important;
@@ -244,12 +248,22 @@ nav ul li span:nth-child(4) {
     width:15em;
 }
 .AgeValue {
-    width: 10%;
+    width: 50%;
     background-color: #5a6268;
-    border-radius:3px;
+    border: 1px solid rgb(128, 189, 255);
+    color: white;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
 }
 
 .SliderAge{
     width: 6em;
+}
+
+.Testo {
+    border: 1px solid rgb(128, 189, 255) !important;
+    background-color: #5a6268 !important;
 }
 /* End SearchFilter Section */

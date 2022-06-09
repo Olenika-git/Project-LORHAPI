@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="~/lib/noUiSlider/nouislider.css" />
 </head>
 <body>
-<section id="header">
     <header>
         <nav class="HeaderBgColor">
             <div class="container-fluid">
@@ -24,7 +23,7 @@
                     
 
                     <li class="title">
-                        <a class="TitleHeader NoDecoration" asp-area="" asp-controller="Home" asp-action="Index">LorHapi</a>
+                        <h1 class="TitleHeader NoDecoration">LorHapi</h1>
                     </li>
 
                     <li class="">
@@ -35,45 +34,43 @@
                 </ul>
             </div>
         </nav>
-    </header>
-</section>  
+    </header> 
 
         <main role="main" class="">
             @RenderBody()
         </main>
    
-<section id="footer">
+
     <footer class="border-top footer FooterBgColor">
         <div class="container-fluid d-flex flex-row justify-content-around pt-2 pb-2">
 
             <div class="container d-flex flex-row justify-content-around">
 
                 
-                    <img class="rounded" height="60" width="60" src="~/Images/logos/armee.png" />
+                    <img class="rounded" alt="Logo Gouvernement Francais" height="60" width="60" src="~/Images/logos/armee.png" />
                 
-                    <img class="rounded" height="60" width="60" src="~/Images/logos/pe.png" />
+                    <img class="rounded" alt="Logo Pôle-Emploi" height="60" width="60" src="~/Images/logos/pe.png" />
                 
                     
             </div>
             
             <div class="container d-flex flex-row justify-content-around align-items-center">
-                <a class="noDecoWithFontFamily" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
+                <a class="noDecoWithFontFamily testBanner" asp-area="" asp-controller="Home" asp-action="Privacy">COPYRIGHT 2022 © LORHAPI</a>
             </div>
             
 
             <div class="container d-flex flex-row justify-content-around">
 
                 
-                    <img class="rounded" height="60" width="60" src="~/Images/logos/smv.png" />
+                    <img class="rounded" alt="Logo Service-civique-Volontaire" height="60" width="60" src="~/Images/logos/smv.png" />
                 
-                    <img class="rounded" height="60" width="60" src="~/Images/logos/ml.png" />
+                    <img class="rounded" alt="Logo Mission-Locale" height="60" width="60" src="~/Images/logos/ml.png" />
                 
                 
              </div>
             
         </div>
     </footer>
-</section>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/noUiSlider/nouislider.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
