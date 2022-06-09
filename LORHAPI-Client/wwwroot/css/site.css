@@ -1,6 +1,18 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* Start Reset Section */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height:100vh;
+}
+/* End Reset Section */
+
 /* Start Media Queries Mobile */
 @media (max-width: 575.98px) {
     
@@ -23,21 +35,14 @@ for details on configuring this project to bundle and minify static web assets. 
     }
 }
 
+/* End Media Queries */
+
+
+/* Start Header Section */
+
 .BannerMaxHeight{
     max-height:200px;
 }
-
-/* End Media Queries */
-
-/* Start Reset Section */
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-/* End Reset Section */
-
-/* Start Header Section */
 
 .TitleHeader {
     font: normal normal normal 60px/78px Lorhapi;
@@ -220,3 +225,31 @@ nav ul li span:nth-child(4) {
     width:400px;
 }
 /* End SearchBar Section */
+
+/* Start SearchFilter Section */
+
+.FilterSize{
+    display:flex;
+    width:42% !important;
+    height:200px;
+    justify-self:center;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:aqua;
+    margin-top:50px;
+    border-radius:3px;
+}
+
+.ContainerFilterSizing{
+    width:15em;
+}
+.AgeValue {
+    width: 10%;
+    background-color: #5a6268;
+    border-radius:3px;
+}
+
+.SliderAge{
+    width: 6em;
+}
+/* End SearchFilter Section */

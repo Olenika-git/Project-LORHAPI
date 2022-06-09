@@ -1,4 +1,10 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var slider = document.getElementById('slider');
 
-// Write your JavaScript code.
+noUiSlider.create(slider, {
+    start: [15, 100],
+    connect: true,
+    range: {
+        'min': 15,
+        'max': 100
+    }
+});
