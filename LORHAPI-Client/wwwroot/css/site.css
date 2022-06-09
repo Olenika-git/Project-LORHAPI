@@ -243,8 +243,10 @@ nav ul li span:nth-child(4) {
 .ContainerFilterSizing{
     width:15em;
 }
-.AgeValue{
-    width:10%;
+.AgeValue {
+    width: 10%;
+    background-color: #5a6268;
+    border-radius:3px;
 }
 
 .SliderAge{
