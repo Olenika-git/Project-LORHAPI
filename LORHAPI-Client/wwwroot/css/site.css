@@ -7,6 +7,9 @@ for details on configuring this project to bundle and minify static web assets. 
     margin: 0;
     padding: 0;
 }
+html {
+    height:100%
+}
 
 body{
     height:100vh;
@@ -268,15 +271,26 @@ nav ul li span:nth-child(4) {
     border-radius: 17px;
     font-size: 1.2rem;
     font-weight: 700;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 300px;
+    max-width: 200px;
     text-align: center;
     flex: auto;
     display:flex;
+    
 }
+
+/*Admin welcome page*/
 .MarginCenter {
     margin-left:2%;
+}
+.Line {
+    height:1px;
+    width:100%
+}
+
+.CenterText {
+    display:flex;
+    justify-content:center;
+
 }
 
 
