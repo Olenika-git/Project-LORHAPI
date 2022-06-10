@@ -13,5 +13,25 @@ namespace LORHAPI_Client.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult Users()
+        {
+            return View();
+
+        }
+
+        public IActionResult Insertions()
+        {
+            return View();
+
+        }
+
+        public IActionResult Organizations()
+        {
+            return View();
+
+        }
+
+
     }
 }
