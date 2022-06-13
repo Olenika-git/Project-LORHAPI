@@ -5,10 +5,6 @@
     {
       "library": "bootstrap-icons@1.8.3",
       "destination": "wwwroot/lib/bootstrap-icons/"
-    },
-    {
-      "library": "noUiSlider@15.6.0",
-      "destination": "wwwroot/lib/noUiSlider/"
     }
   ]
 }
