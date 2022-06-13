@@ -181,13 +181,10 @@ nav ul li span:nth-child(4) {
 /* Start SearchBar Section */
 
 .SearchBarPosition {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 22%;
     width: 100%;
+    margin-top:3vh;
 }
 
 #custom-search-input {
@@ -267,3 +264,10 @@ nav ul li span:nth-child(4) {
     background-color: #5a6268 !important;
 }
 /* End SearchFilter Section */
+
+.ManuHeight{
+    height:200px;
+    display:block;
+    background-image:url("../Images/banners/Jeune.jpg");
+    background-size:cover;
+}
