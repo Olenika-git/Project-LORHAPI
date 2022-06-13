@@ -12,7 +12,7 @@ html {
 }
 
 body{
-    height:100vh;
+    min-height:100%;
 }
 /* End Reset Section */
 
@@ -285,7 +285,7 @@ nav ul li span:nth-child(4) {
 .Line {
     height:1px;
     width:100%;
-    background-color:black;
+    background-color:gray;
 }
 
 .CenterText {
@@ -293,6 +293,7 @@ nav ul li span:nth-child(4) {
     justify-content:center;
     justify-items:center;
     max-width:100%;
+    text-align:center;
 }
 
 /*basic Button with little radius*/
@@ -304,12 +305,24 @@ nav ul li span:nth-child(4) {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-/* UserList*/
+/* UserList and organizations*/
 .Carte {
-    height: 100px;
-    width: 50px;
+    height: 250px;
+    width: 200px;
     background-color:white;
+    border-radius:10px;
 
 }
+.MarginCarte {
+    margin-left: 21px;
+}
+.BlueContainer {
+    width: 1000px;
+    background-color: #E6ECFB;
+}
+.DispositionLine {
+    margin-bottom:15px
+}
+
 
 
