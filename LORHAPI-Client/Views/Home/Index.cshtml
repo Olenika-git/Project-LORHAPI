@@ -4,13 +4,8 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container-fluid p-0 ManuHeight">
-    @* Banner Image*@
-    @*<div class="d-flex flex-nowrap MH100MQueries BannerMaxHeight">
-        <img class="w-100" src="~/Images/banners/Jeune.jpg" />
-    </div>*@
-    
-   @* Research Bar*@
+<div class="container-fluid p-0 SearchHeight d-flex align-items-center">
+   @* Banner Image + Research Bar*@
     <div class="SearchBarPosition SearchBarPositionMobile searchWidth searchWidthMobile">
         <div id="custom-search-input w-100">
             <div class="input-group col-md-12">
@@ -29,6 +24,7 @@
 <div class="container FilterSize justify-content-center">
     <div class="flex-column align-self-center">        
             @* Age *@
+            
         <div class="d-flex flex-row justify-content-around">
             <div class="ContainerFilterSizing text-center">
                 <p>Age</p>
@@ -36,6 +32,7 @@
                     <input class="AgeValue text-center" type="text" id="fname" name="fname" value="0">
                 </div>
             </div>
+            
             @* Department *@
             <div class="ContainerFilterSizing text-center">
                 <p>Département</p>
@@ -51,6 +48,7 @@
             </div>
             
         </div>
+        
         <div class="d-flex flex-row justify-content-around">
             @* Activity Sector *@
             <div class="ContainerFilterSizing text-center">               
@@ -66,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            
             @* Degree Required *@
             <div class="ContainerFilterSizing text-center">
                 <p>Diplôme Requis</p>
