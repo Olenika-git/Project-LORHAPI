@@ -83,115 +83,115 @@
         </div>
     </div>    
 </div>
-@*
-<h1>Index</h1>
+
+<h1>index</h1>
 <p>
-    <a asp-action="Privacy">Create New</a>
-</p>*@
+    <a asp-action="privacy">create new</a>
+</p>
 @*<table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.IdInsertion)
+                @html.displaynamefor(model => model.idinsertion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @html.displaynamefor(model => model.title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @html.displaynamefor(model => model.description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AgeMin)
+                @html.displaynamefor(model => model.agemin)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AgeMax)
+                @html.displaynamefor(model => model.agemax)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Salary)
+                @html.displaynamefor(model => model.salary)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Place)
+                @html.displaynamefor(model => model.place)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Duration)
+                @html.displaynamefor(model => model.duration)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StartDate)
+                @html.displaynamefor(model => model.startdate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EndDate)
+                @html.displaynamefor(model => model.enddate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RedirectionLink)
+                @html.displaynamefor(model => model.redirectionlink)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdOrganization)
+                @html.displaynamefor(model => model.idorganization)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DegreeRequired)
+                @html.displaynamefor(model => model.degreerequired)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DegreeObtained)
+                @html.displaynamefor(model => model.degreeobtained)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdSector)
+                @html.displaynamefor(model => model.idsector)
             </th>
             <th></th>
         </tr>
     </thead>
     
     <tbody>
-        @foreach (var item in Model) {
+        @foreach (var item in model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.IdInsertion)
+                @html.displayfor(modelitem => item.idinsertion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @html.displayfor(modelitem => item.title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @html.displayfor(modelitem => item.description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AgeMin)
+                @html.displayfor(modelitem => item.agemin)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AgeMax)
+                @html.displayfor(modelitem => item.agemax)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Salary)
+                @html.displayfor(modelitem => item.salary)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Place)
+                @html.displayfor(modelitem => item.place)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Duration)
+                @html.displayfor(modelitem => item.duration)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
+                @html.displayfor(modelitem => item.startdate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
+                @html.displayfor(modelitem => item.enddate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RedirectionLink)
+                @html.displayfor(modelitem => item.redirectionlink)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdOrganization)
+                @html.displayfor(modelitem => item.idorganization)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DegreeRequired)
+                @html.displayfor(modelitem => item.degreerequired)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DegreeObtained)
+                @html.displayfor(modelitem => item.degreeobtained)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdSector)
+                @html.displayfor(modelitem => item.idsector)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @html.actionlink("edit", "edit", new { /* id=item.primarykey */ }) |
+                @html.actionlink("details", "details", new { /* id=item.primarykey */ }) |
+                @html.actionlink("delete", "delete", new { /* id=item.primarykey */ })
             </td>
         </tr>
 }

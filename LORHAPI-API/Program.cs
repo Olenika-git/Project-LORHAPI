@@ -20,6 +20,7 @@ namespace LORHAPI_API
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("https://0.0.0.0:5101;http://0.0.0.0:5100");
                     webBuilder.UseStartup<Startup>();
                 });
     }

@@ -13,7 +13,6 @@ namespace LORHAPI_API
             {
                 IdClient = user.IdClient,
                 Mail    = user.Mail,
-                Password = user.Password,
                 isActive = user.IsActive,
                 UserType = user.UserType,
                 CreationDateTime = user.CreationDateTime,

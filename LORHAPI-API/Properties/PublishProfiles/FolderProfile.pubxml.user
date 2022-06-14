@@ -6,16 +6,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\akine\Desktop\UpUp</_PublishTargetUrl>
-    <History>True|2022-06-09T18:10:57.2218431Z;</History>
+    <History>True|2022-06-14T07:58:35.3973194Z;True|2022-06-14T09:54:26.8118846+02:00;True|2022-06-14T09:51:42.1017884+02:00;True|2022-06-14T09:42:31.6456554+02:00;True|2022-06-14T09:32:45.9996985+02:00;True|2022-06-14T09:22:15.2571656+02:00;False|2022-06-14T09:20:07.6209745+02:00;True|2022-06-14T09:13:52.0846309+02:00;True|2022-06-14T09:09:18.9623507+02:00;True|2022-06-14T09:03:23.8065854+02:00;True|2022-06-09T20:10:57.2218431+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>server=185.109.175.36%3b database=lor-hapi%3b user=root%3b password=tamerepd</Value>
+      <Value>server=162.19.64.76%3bdatabase=lor-hapi%3buser=root%3bpassword=tamere57</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
     <EFMigrations Include="LORHAPI_API.Data.Db_Context">
-      <Value>server=185.109.175.36%3b database=lor-hapi%3b user=root%3b password=tamerepd</Value>
+      <Value>server=162.19.64.76%3bdatabase=lor-hapi%3buser=root%3bpassword=tamere57</Value>
     </EFMigrations>
   </ItemGroup>
 </Project>

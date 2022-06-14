@@ -8,8 +8,13 @@ namespace LORHAPI_Client.Http
     {
         public HttpClient Initial()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://162.19.64.76:5001/");
+            var handler = new HttpClientHandler() // accepte tout les certificat à remove par la suite
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            };
+            
+            var client = new HttpClient(handler);
+            client.BaseAddress = new Uri("http://162.19.64.76:5100");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             return client;

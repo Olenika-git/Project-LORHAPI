@@ -8,8 +8,6 @@ namespace LORHAPI_API.Dtos.UserDtos
 
         public string Mail { get; set; }
 
-        public string Password { get; set; }
-
         public bool isActive { get; set; }
 
         public UserTypes UserType { get; set; }

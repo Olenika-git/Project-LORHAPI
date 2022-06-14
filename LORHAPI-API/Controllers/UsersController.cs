@@ -102,12 +102,12 @@ namespace LORHAPI_API.Controllers
             try
             {
                 User CheckEmailFirst = UserContext.Users.Where(u => u.Mail == CreateUser.Mail).FirstOrDefault();
-                
-                
+
+
                 user = new()
                 {
                     Mail = CreateUser.Mail,
-                    Password = CreateUser.Password,
+                    Password = BCrypt.Net.BCrypt.HashPassword(CreateUser.Password),
                     IsActive = true,
                     UserType = UserTypes.User,
                     CreationDateTime = DateTime.Now,
@@ -163,8 +163,7 @@ namespace LORHAPI_API.Controllers
                 }
                 else
                 {
-                    existingUser.Mail = userDto.Mail;
-                    existingUser.Password = userDto.Password;
+                    existingUser.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
 
                     await repository.UpdateUserAsync(existingUser);
                 }
