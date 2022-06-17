@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using LORHAPI_Client.Areas.Admin.Controllers;
 
 namespace LORHAPI_Client.Controllers
 {
@@ -17,7 +18,7 @@ namespace LORHAPI_Client.Controllers
     {
         private InsertionApi _api = new();
         private readonly ILogger<HomeController> _logger;
-
+        public CurrentUser CurrentUser { get; set; }
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -38,7 +39,7 @@ namespace LORHAPI_Client.Controllers
             return View(insertions);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contactez_Nous()
         {
             return View();
         }
@@ -56,8 +57,20 @@ namespace LORHAPI_Client.Controllers
         [HttpPost]
         public IActionResult ConnectionPage(string MailConnection, string PasswordConnection)
         {
-            //doit envoyer vers la zone ou il doit se trouver
-            return View();
+            //Requete recherche par le mail sur l'API puis ensuite verification de ce qu'il fait
+
+            if (CurrentUser.UserType == UserTypes.Admin)
+            {
+                return Redirect("~/Admin/Home");
+            }
+            else if (CurrentUser.UserType == UserTypes.OrgManager)
+            {
+                return Redirect("~/OrgManager/Home");
+            }
+            else
+            {
+                return Redirect("~/User/Home");
+            }
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

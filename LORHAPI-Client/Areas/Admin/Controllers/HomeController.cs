@@ -12,14 +12,14 @@ namespace LORHAPI_Client.Areas.Admin.Controllers
     [Area("Admin")]
     public class HomeController : Controller
     {
-        public CurrentUser User { get; set; }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Users()
+        public IActionResult Users(List<User> Users)
         {
+            
             return View();
 
         }
@@ -39,6 +39,5 @@ namespace LORHAPI_Client.Areas.Admin.Controllers
         {
             return View();
         }
-
     }
 }

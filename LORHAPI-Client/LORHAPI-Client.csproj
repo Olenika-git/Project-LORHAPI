@@ -14,13 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\OrgManager\Controllers\" />
     <Folder Include="Areas\OrgManager\Data\" />
     <Folder Include="Areas\OrgManager\Models\" />
     <Folder Include="Areas\OrgManager\Views\" />
-    <Folder Include="Areas\User\Controllers\" />
+    <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\" />
   </ItemGroup>
 
