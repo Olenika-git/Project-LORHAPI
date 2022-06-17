@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LORHAPI_Client.Areas.Admin.Controllers
+namespace LORHAPI_Client.Areas.OrgManager.Controllers
 {
     //[Authorize ("Roles=Admin")]
-    [Area("Admin")]
+    [Area("OrgManager")]
     public class HomeController : Controller
     {
         public CurrentUser User { get; set; }
@@ -25,12 +25,6 @@ namespace LORHAPI_Client.Areas.Admin.Controllers
         }
 
         public IActionResult Insertions()
-        {
-            return View();
-
-        }
-
-        public IActionResult Organizations()
         {
             return View();
 

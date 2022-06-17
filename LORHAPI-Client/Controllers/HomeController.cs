@@ -48,6 +48,17 @@ namespace LORHAPI_Client.Controllers
             return View();
         }
 
+        public IActionResult InscriptionPage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ConnectionPage(string MailConnection, string PasswordConnection)
+        {
+            //doit envoyer vers la zone ou il doit se trouver
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
