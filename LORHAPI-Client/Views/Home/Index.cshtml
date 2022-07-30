@@ -1,4 +1,5 @@
-﻿@model IEnumerable<LORHAPI_Client.Models.Insertion>
+﻿@*@model IEnumerable<LORHAPI_Client.Models.Insertion>*@
+@model dynamic
 
 @{
     ViewData["Title"] = "Accueil";
@@ -73,9 +74,10 @@
                     Aucun Diplôme
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">CAP</a>
-                    <a class="dropdown-item" href="#">BEP</a>
-                    <a class="dropdown-item" href="#">BAC</a>
+                    @foreach (Department department in Model.Departments)
+                        {
+                            <a>@department.Name</a>
+                        }
                     </div>
                 </div>
             </div>
@@ -86,7 +88,7 @@
 
 
 <div>
-    @foreach (var insertion in Model)
+    @foreach (Insertion insertion in Model.Insertions)
     {
         <div>@insertion.IdInsertion</div>
         <div>@insertion.Title </div>

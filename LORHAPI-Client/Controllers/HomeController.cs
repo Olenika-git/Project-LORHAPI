@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,15 +28,26 @@ namespace LORHAPI_Client.Controllers
         public ActionResult Index()
         {
             List<Insertion> insertions = new List<Insertion>();
+            List<Department> departments = new List<Department>();
             HttpClient client  = _api.Initial();
-            
+            dynamic monModel = new ExpandoObject();
+
             HttpResponseMessage response = client.GetAsync("/Insertions").Result;
             if (response.IsSuccessStatusCode)
             {
                 var results = response.Content.ReadAsStringAsync().Result;
                 insertions = JsonConvert.DeserializeObject<List<Insertion>>(results);
             }
-            return View(insertions);
+            HttpResponseMessage responseDep = client.GetAsync("/Department").Result;
+            if (responseDep.IsSuccessStatusCode)
+            {
+                var resultsDep = responseDep.Content.ReadAsStringAsync().Result;
+                departments = JsonConvert.DeserializeObject<List<Department>>(resultsDep);
+            }
+
+            monModel.Insertions = insertions;
+            monModel.Departments = departments;
+            return View(monModel);
         }
 
         public IActionResult Privacy()

@@ -13,14 +13,18 @@ namespace LORHAPI_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DepartmentController : Controller
+    public class DepartmentController : ControllerBase
     {
         private readonly Db_Context DepartmentContext;  //ont initialise le DbContext
-
         private readonly IDepartmentRepository repository; //ont initialise le repository
-
-
         private readonly ILogger<DepartmentController> _logger; //ont initialise le Log System
+
+        public DepartmentController(ILogger<DepartmentController> logger, Db_Context context, IDepartmentRepository repository) // on donne en parametre un Db_Context)
+        {
+            _logger = logger;
+            DepartmentContext = context;  //on assigne le Db_Context
+            this.repository = repository; //on assigne le repo
+        }
 
         // GET /Department
         /// <summary>

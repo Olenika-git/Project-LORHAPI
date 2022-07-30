@@ -1,4 +1,6 @@
-﻿namespace LORHAPI_Client.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LORHAPI_Client.Models
 {
     public class Department
     {
