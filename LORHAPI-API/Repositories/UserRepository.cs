@@ -1,5 +1,6 @@
 ﻿using LORHAPI_API.Data;
 using LORHAPI_API.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -79,6 +80,25 @@ namespace LORHAPI_API.Repositories
                 await _dbcontext.SaveChangesAsync();
             }
             
+            await Task.CompletedTask;
+        }
+
+        public async Task UpdateDate(User user)
+        {
+            int UserIndex = UserList.FindIndex(ExistingUser => ExistingUser.IdClient == user.IdClient);
+
+            if (UserIndex == -1)
+            {
+                return;
+            }
+            else
+            {
+                user.LastConnectionDateTime = DateTime.Now;
+                UserList[UserIndex] = user;
+                _dbcontext.Update(user);
+                await _dbcontext.SaveChangesAsync();
+            }
+
             await Task.CompletedTask;
         }
 

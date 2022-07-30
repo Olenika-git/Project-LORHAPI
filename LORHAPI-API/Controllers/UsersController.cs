@@ -94,7 +94,7 @@ namespace LORHAPI_API.Controllers
         /// </summary>
         /// <param name="CreateUser"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("CreateUser")]
         public async Task<ActionResult<CreateUserDto>> CreateUser(CreateUserDto CreateUser)
         {
             User user = new();
@@ -197,6 +197,40 @@ namespace LORHAPI_API.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine("Error in DeleteUser " + ex.Message);
+            }
+
+            return NoContent();
+        }
+
+        //Login /Users/Login
+        [HttpPost("Login")]
+        public async Task<ActionResult> LoginUser(LoginUserDto loginUser)
+        {
+            try
+            {
+                User ExistingUser = UserContext.Users.Where(u => u.Mail == loginUser.Mail).FirstOrDefault();
+
+                if (ExistingUser == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    if (BCrypt.Net.BCrypt.Verify(loginUser.Password, ExistingUser.Password))
+                    {
+                        await repository.UpdateDate(ExistingUser);
+
+                        return Ok(ExistingUser.AsDto());
+                    }
+                    else
+                    {
+                        return Unauthorized();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error in LoginUser " + ex.Message);
             }
 
             return NoContent();

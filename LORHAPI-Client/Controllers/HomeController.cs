@@ -65,5 +65,11 @@ namespace LORHAPI_Client.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
+        public async Task<IActionResult> LoginAsync(UserLogin user)
+        {
+            var token = await _api.LoginAsync(user.Email, user.Password);
+            return Ok();
+        }
     }
 }

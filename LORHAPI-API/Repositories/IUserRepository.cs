@@ -41,5 +41,7 @@ namespace LORHAPI_API.Repositories
         /// <param name="id">User ID</param>
         /// <returns></returns>
         Task DeleteUserAsync(int id);
+
+        Task UpdateDate(User user);
     }
 }

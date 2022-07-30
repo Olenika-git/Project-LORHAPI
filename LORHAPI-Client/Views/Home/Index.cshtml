@@ -42,8 +42,10 @@
                     00 - Département
                   </button>
                   <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">01 - Chez Gilles</a>
-                      <a class="dropdown-item" href="#">02 - Chez Gaetan</a>
+                      @foreach (Department department in Model.Departments)
+                        {
+                            <a class="dropdown-item" href="#">@department.Name</a>
+                        }
                   </div>
                 </div>
             </div>
@@ -74,10 +76,7 @@
                     Aucun Diplôme
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    @foreach (Department department in Model.Departments)
-                        {
-                            <a>@department.Name</a>
-                        }
+                    <a class="dropdown-item" href="#">Sans Emploi</a>
                     </div>
                 </div>
             </div>
