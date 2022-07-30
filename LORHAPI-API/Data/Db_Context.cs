@@ -1,4 +1,5 @@
-﻿using LORHAPI_API.Model;
+﻿using LORHAPI_API.Entities;
+using LORHAPI_API.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace LORHAPI_API.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Insertion> Insertions { get; set; }
         public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -23,6 +25,7 @@ namespace LORHAPI_API.Data
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Insertion>().ToTable("Insertion");
             modelBuilder.Entity<Organization>().ToTable("Organization");
+            modelBuilder.Entity<Department>().ToTable("Department");
         }
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace LORHAPI_API.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LORHAPI_API.Entities
 {
     public class Department
     {
+        [Key]
         public int IdDepartment { get; set; }
         public string Name { get; set; }
 

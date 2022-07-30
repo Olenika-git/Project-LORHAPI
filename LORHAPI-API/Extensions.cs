@@ -1,6 +1,8 @@
-﻿using LORHAPI_API.Dtos.InsertionDtos;
+﻿using LORHAPI_API.Dtos.DepartmentDtos;
+using LORHAPI_API.Dtos.InsertionDtos;
 using LORHAPI_API.Dtos.OrganizationDtos;
 using LORHAPI_API.Dtos.UserDtos;
+using LORHAPI_API.Entities;
 using LORHAPI_API.Model;
 
 namespace LORHAPI_API
@@ -53,6 +55,15 @@ namespace LORHAPI_API
                 DegreeRequired = insertion.DegreeRequired,
                 DegreeObtained = insertion.DegreeObtained,
                 IdSector = insertion.IdSector
+            };
+        }
+
+        public static DepartmentDto AsDto(this Department department) //Extension Method Department => EnTantQueDTO
+        {
+            return new DepartmentDto
+            {
+                IdDepartment = department.IdDepartment,
+                Name = department.Name
             };
         }
     }
