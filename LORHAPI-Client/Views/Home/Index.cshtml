@@ -22,10 +22,10 @@
 
 @* Search Filter*@
 <div class="container FilterSize justify-content-center">
-    <div class="flex-column align-self-center">        
-            @* Age *@
-            
+    <div class="flex-column align-self-center">     
         <div class="d-flex flex-row justify-content-around">
+            
+            @* Age *@          
             <div class="ContainerFilterSizing text-center">
                 <p>Age</p>
                 <div class="d-flex flex-row justify-content-center mw-50">
@@ -84,10 +84,20 @@
     </div>    
 </div>
 
-<h1>index</h1>
+
+<div>
+    @foreach (var insertion in Model)
+    {
+        <div>@insertion.IdInsertion</div>
+        <div>@insertion.Title </div>
+        <div>@insertion.Description </div>
+    }
+</div>
+
+@*<h1>index</h1>
 <p>
     <a asp-action="privacy">create new</a>
-</p>
+</p>*@
 @*<table class="table">
     <thead>
         <tr>

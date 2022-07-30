@@ -49,17 +49,22 @@ namespace LORHAPI_Client
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                  name: "areas",
+                  name: "Admin",
                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                 );
-            });
+                
+                endpoints.MapControllerRoute(
+                  name: "User",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
 
-            app.UseEndpoints(endpoints =>
-            {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+          
+            
         }
     }
 }
