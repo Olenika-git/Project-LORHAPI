@@ -44,6 +44,7 @@ namespace LORHAPI_Client
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
