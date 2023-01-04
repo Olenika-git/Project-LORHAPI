@@ -4,6 +4,7 @@ using LORHAPI_API.Model;
 using LORHAPI_API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Org.BouncyCastle.Crypto.Generators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,7 +108,7 @@ namespace LORHAPI_API.Controllers
                 user = new()
                 {
                     Mail = CreateUser.Mail,
-                    Password = CreateUser.Password,
+                    Password = BCrypt.Net.BCrypt.HashPassword(CreateUser.Password, BCrypt.Net.BCrypt.GenerateSalt()),
                     IsActive = true,
                     UserType = UserTypes.User,
                     CreationDateTime = DateTime.Now,
